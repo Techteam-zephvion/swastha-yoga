@@ -1,26 +1,74 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* deep indigo/purple sampled from the Swastha Yoga logo figure (#211D52) */
+  --color-ink: #150f2e;
+  --color-ink-light: #211d52;
+  --color-ink-soft: #2a2360;
+  /* magenta/pink sampled from the logo's lotus (#F6548D) */
+  --color-accent-pink: #ec5c8d;
+  --color-accent-pink-soft: #f6a3c0;
+  /* warm gold sampled from the brand gold texture (#E4CE9F) */
+  --color-accent-gold: #d8b978;
+  --color-accent-gold-soft: #e9d9ae;
+  --color-cream: #f6f2ea;
+  --color-cream-dim: #cfc9ba;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-ink: var(--color-ink);
+  --color-ink-light: var(--color-ink-light);
+  --color-ink-soft: var(--color-ink-soft);
+  --color-accent-pink: var(--color-accent-pink);
+  --color-accent-pink-soft: var(--color-accent-pink-soft);
+  --color-accent-gold: var(--color-accent-gold);
+  --color-accent-gold-soft: var(--color-accent-gold-soft);
+  --color-cream: var(--color-cream);
+  --color-cream-dim: var(--color-cream-dim);
+  --font-display: var(--font-display);
+  --font-sans: var(--font-sans);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+h1,
+h2,
+h3,
+.font-display {
+  font-family: var(--font-display), serif;
+}
+
+@keyframes float-y {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-16px);
+  }
+}
+
+@keyframes breathe {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.35;
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 0.5;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
