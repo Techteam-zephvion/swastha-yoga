@@ -7,13 +7,22 @@ import { gsap, prefersReducedMotion } from "@/lib/gsap";
 import { site } from "@/lib/content";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 
-const BIRD_PATH = "M0,6 Q5,0 10,6 Q15,0 20,6";
+// A solid, filled gull silhouette — reads clearly against the sky rather
+// than the faint open-stroke mark used previously.
+const BIRD_PATH =
+  "M0,8 Q5,-3 10,5 Q15,-3 20,8 Q15,3 10,7.5 Q5,3 0,8 Z";
 
 const birds = [
-  { flightPath: "M -60,180 C 300,60 700,260 1660,120", duration: 22, delay: 0, size: 26 },
-  { flightPath: "M -60,340 C 350,220 650,420 1660,280", duration: 26, delay: 3, size: 20 },
-  { flightPath: "M -60,120 C 250,240 800,40 1660,200", duration: 30, delay: 7, size: 22 },
-  { flightPath: "M -60,420 C 400,300 750,480 1660,360", duration: 24, delay: 11, size: 16 },
+  { flightPath: "M -60,140 C 300,40 700,220 1660,90", duration: 22, delay: 0, size: 30 },
+  { flightPath: "M -60,260 C 350,160 650,320 1660,200", duration: 26, delay: 3, size: 22 },
+  { flightPath: "M -60,90 C 250,190 800,20 1660,150", duration: 30, delay: 7, size: 26 },
+  { flightPath: "M -60,320 C 400,240 750,380 1660,280", duration: 24, delay: 11, size: 18 },
+];
+
+const clouds = [
+  { top: "10%", left: "10%", width: 280, height: 90, duration: 46 },
+  { top: "20%", left: "56%", width: 340, height: 100, duration: 55 },
+  { top: "6%", left: "74%", width: 220, height: 70, duration: 40 },
 ];
 
 export function Hero() {
@@ -118,44 +127,63 @@ export function Hero() {
         className="absolute inset-0 bg-gradient-to-t from-ink via-ink/40 to-ink/20"
       />
 
-      {/* depth-2: birds drifting across the scene on curved flight paths */}
+      {/* depth-1: warm sun glow in the gap between the gate spires */}
+      <div
+        aria-hidden="true"
+        className="absolute left-1/2 top-[14%] h-[36vh] w-[36vh] -translate-x-1/2 -translate-y-1/2 rounded-full bg-accent-gold/40 opacity-70 blur-3xl animate-[breathe_9s_ease-in-out_infinite]"
+      />
+
+      {/* depth-1: soft drifting clouds across the sky */}
+      <div aria-hidden="true" className="absolute inset-0 overflow-hidden">
+        {clouds.map((cloud, i) => (
+          <div
+            key={i}
+            className="absolute rounded-[50%] bg-cream/80 blur-xl"
+            style={{
+              top: cloud.top,
+              left: cloud.left,
+              width: cloud.width,
+              height: cloud.height,
+              boxShadow: "0 0 60px 20px rgba(246,242,234,0.35)",
+              animation: `cloud-drift ${cloud.duration}s ease-in-out infinite alternate`,
+            }}
+          />
+        ))}
+      </div>
+
+      {/* depth-2: silhouette birds drifting across the scene on curved flight paths */}
       <svg
         ref={birdsRef}
         aria-hidden="true"
         viewBox="0 0 1600 600"
         preserveAspectRatio="none"
-        className="pointer-events-none absolute inset-0 h-full w-full text-cream-dim/70"
+        className="pointer-events-none absolute inset-0 h-full w-full text-ink-light"
       >
         {birds.map((bird, i) => (
           <path key={`guide-${i}`} id={`bird-path-${i}`} d={bird.flightPath} opacity={0} fill="none" />
         ))}
         {birds.map((bird, i) => (
           <g key={`bird-${i}`} className="hero-bird">
-            <path
-              d={BIRD_PATH}
-              transform={`scale(${bird.size / 20})`}
-              fill="none"
-              stroke="currentColor"
-              strokeWidth={2}
-              strokeLinecap="round"
-            />
+            <path d={BIRD_PATH} transform={`scale(${bird.size / 20})`} fill="currentColor" />
           </g>
         ))}
       </svg>
 
-      {/* depth-3: the master, mid-handstand, floating in front of the gate */}
+      {/* depth-3: the master, mid-handstand, floating in front of the gate —
+          sized by height (not width) so it can never overflow the section
+          on narrow, tall mobile viewports */}
       <div
         ref={figureRef}
         aria-hidden="true"
-        className="absolute bottom-0 right-[4%] w-[clamp(200px,30vw,420px)] drop-shadow-[0_30px_40px_rgba(0,0,0,0.5)] md:right-[8%] md:w-[clamp(240px,34vw,520px)]"
+        className="absolute bottom-0 right-[4%] h-[clamp(200px,42vh,480px)] drop-shadow-[0_30px_40px_rgba(0,0,0,0.5)] md:right-[8%]"
       >
         <Image
           src="/hero/hero-figure-cutout.webp"
           alt=""
           width={322}
           height={756}
-          sizes="(min-width: 768px) 34vw, 30vw"
-          className="h-auto w-full"
+          sizes="480px"
+          className="h-full w-auto"
         />
       </div>
 

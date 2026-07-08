@@ -62,6 +62,15 @@ h3,
   }
 }
 
+@keyframes cloud-drift {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(40px);
+  }
+}
+
 @keyframes petal-drift {
   0%,
   100% {
