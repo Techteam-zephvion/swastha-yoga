@@ -1,0 +1,32 @@
+.root {
+  composes: fill from "../../../styles/layer-fill.module.css";
+  overflow: hidden;
+  will-change: opacity;
+  mix-blend-mode: screen;
+}
+
+/* The real photographic sun glow. Screen blend means its near-black
+   pixels (everywhere but the sun/cloud highlights) contribute nothing,
+   so exact alignment with the background plate's own horizon doesn't
+   matter — only the warm light itself shows through. */
+.overlayImage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 42%;
+  opacity: 0.5;
+  filter: blur(var(--blur-sm)) saturate(0.6) sepia(0.06);
+}
+
+/* Soft volumetric glow — no hard rays. An SVG radial-gradient wash,
+   heavily blurred, reading as sunlight diffusing through cloud cover
+   rather than a light source with visible beams. */
+.glow {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  filter: blur(var(--blur-xl));
+}

@@ -1,0 +1,49 @@
+.wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/* ---- Radius ---- */
+.radius-none {
+  border-radius: 0;
+}
+
+.radius-sm {
+  border-radius: var(--radius-sm);
+}
+
+.radius-md {
+  border-radius: var(--radius-md);
+}
+
+.radius-lg {
+  border-radius: var(--radius-lg);
+}
+
+/* ---- Aspect ratio ---- */
+.ratio-square {
+  aspect-ratio: 1 / 1;
+}
+
+.ratio-portrait {
+  aspect-ratio: 3 / 4;
+}
+
+.ratio-landscape {
+  aspect-ratio: 4 / 3;
+}
+
+.ratio-wide {
+  aspect-ratio: 16 / 9;
+}
+
+.ratio-auto {
+  aspect-ratio: auto;
+}

@@ -1,0 +1,7 @@
+/* Shared by every full-bleed hero layer (background, clouds, sunlight,
+   particles, birds) via `composes:` — keeps the position/inset rule
+   declared once instead of repeated across a dozen component modules. */
+.fill {
+  position: absolute;
+  inset: 0;
+}

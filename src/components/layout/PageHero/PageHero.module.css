@@ -1,0 +1,59 @@
+.root {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  min-height: 46vh;
+  padding: 140px var(--space-xl) var(--space-2xl);
+  overflow: hidden;
+  background-color: var(--color-ink);
+}
+
+.image {
+  object-fit: cover;
+  object-position: center 42%;
+  /* Heavily toned down — this is a supporting backdrop for internal
+     pages, not a second homepage hero. */
+  filter: saturate(0.5) brightness(0.55) sepia(0.06);
+}
+
+.scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(20, 18, 15, 0.75) 0%,
+    rgba(20, 18, 15, 0.35) 55%,
+    rgba(20, 18, 15, 0.5) 100%
+  );
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+}
+
+.breadcrumb {
+  margin-bottom: var(--space-xs);
+}
+
+.title {
+  text-shadow: 0 2px 30px rgba(0, 0, 0, 0.35);
+}
+
+.description {
+  max-width: 46ch;
+  opacity: 0.85;
+}
+
+@media (max-width: 640px) {
+  .root {
+    min-height: 38vh;
+    padding: 120px var(--space-md) var(--space-xl);
+  }
+}

@@ -1,0 +1,70 @@
+.section {
+  width: 100%;
+}
+
+/* ---- Tone ---- */
+.tone-paper {
+  background-color: var(--color-paper);
+}
+
+.tone-ivory {
+  background-color: var(--color-ivory);
+}
+
+.tone-transparent {
+  background-color: transparent;
+}
+
+/* ---- Vertical rhythm ---- */
+.spacing-none {
+  padding-block: 0;
+}
+
+.spacing-sm {
+  padding-block: var(--space-lg);
+}
+
+.spacing-md {
+  padding-block: var(--space-xl);
+}
+
+.spacing-lg {
+  padding-block: var(--space-2xl);
+}
+
+/* ---- Horizontal measure ---- */
+.container {
+  margin-inline: auto;
+  padding-inline: var(--space-lg);
+}
+
+.width-narrow {
+  max-width: var(--container-narrow);
+}
+
+.width-default {
+  max-width: var(--container-max);
+}
+
+.width-wide {
+  max-width: var(--container-wide);
+}
+
+.width-full {
+  max-width: none;
+  padding-inline: 0;
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding-inline: var(--space-md);
+  }
+
+  .spacing-lg {
+    padding-block: var(--space-xl);
+  }
+
+  .spacing-md {
+    padding-block: var(--space-lg);
+  }
+}

@@ -1,0 +1,15 @@
+.root {
+  position: absolute;
+  left: 50%;
+  top: 28%;
+  transform: translateX(-50%);
+  width: clamp(18rem, 30vw, 44rem);
+  will-change: transform, opacity;
+}
+
+.mark {
+  display: block;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 4px 36px rgba(251, 241, 222, 0.5));
+}

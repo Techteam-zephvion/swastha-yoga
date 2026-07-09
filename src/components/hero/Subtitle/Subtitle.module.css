@@ -1,0 +1,33 @@
+.root {
+  position: absolute;
+  left: 50%;
+  top: 61%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  padding-inline: var(--space-2xl);
+  will-change: transform, opacity;
+}
+
+.text {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: var(--text-subtitle);
+  letter-spacing: 0.02em;
+  line-height: 1.65;
+  color: var(--color-ink);
+  opacity: 0.85;
+  text-shadow: 0 1px 20px rgba(251, 241, 222, 0.6);
+}
+
+@media (max-width: 640px) {
+  .root {
+    top: 64%;
+    padding-inline: var(--space-lg);
+  }
+
+  .text {
+    font-size: 0.85rem;
+  }
+}

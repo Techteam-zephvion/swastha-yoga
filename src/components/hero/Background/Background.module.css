@@ -1,0 +1,44 @@
+.root {
+  composes: fill from "../../../styles/layer-fill.module.css";
+  overflow: hidden;
+}
+
+/* Deliberately static — per the brief, only the overlay layers in
+   front of this photo animate. Pulled well back from the source
+   photo's vivid travel-poster orange toward the muted ivory/gold/
+   lavender editorial palette. */
+.image {
+  object-fit: cover;
+  object-position: center 42%;
+  filter: saturate(0.62) brightness(1.01) contrast(0.98) sepia(0.08) hue-rotate(-6deg);
+}
+
+/* A soft lavender-to-ivory duotone wash, unifying the photo with the
+   muted palette of every vector layer sitting in front of it. */
+.grade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(114, 106, 138, 0.16) 0%,
+    rgba(114, 106, 138, 0.04) 30%,
+    transparent 50%,
+    rgba(220, 174, 147, 0.1) 78%,
+    rgba(220, 174, 147, 0.2) 100%
+  );
+  mix-blend-mode: soft-light;
+}
+
+/* Thin haze pinned near the horizon, unifying the photo with the
+   fog/sunlight layers sitting in front of it. */
+.haze {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    transparent 55%,
+    rgba(243, 234, 217, 0.16) 78%,
+    rgba(243, 234, 217, 0.28) 100%
+  );
+}

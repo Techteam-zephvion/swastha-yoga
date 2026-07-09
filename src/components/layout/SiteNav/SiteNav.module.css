@@ -1,0 +1,213 @@
+.root {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--z-site-nav);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 38px var(--space-xl) 20px;
+  background-color: transparent;
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  border-bottom: 1px solid transparent;
+  transition:
+    background-color var(--duration-fast) var(--ease-out-soft),
+    backdrop-filter var(--duration-fast) var(--ease-out-soft),
+    border-color var(--duration-fast) var(--ease-out-soft),
+    padding var(--duration-fast) var(--ease-out-soft);
+}
+
+/* Soft, fixed-height scrim behind the bar at all times — purely for
+   text contrast against whatever page content sits underneath; never
+   meant to read as a design element itself. */
+.root::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 160px;
+  background: linear-gradient(to bottom, rgba(30, 28, 24, 0.5), rgba(30, 28, 24, 0));
+  pointer-events: none;
+  z-index: 0;
+}
+
+.mark,
+.links,
+.menuButton {
+  position: relative;
+  z-index: 1;
+}
+
+/* Scroll-linked glass treatment. */
+.root[data-scrolled] {
+  background-color: rgba(20, 20, 20, 0.18);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+  padding-top: 22px;
+  padding-bottom: var(--space-sm);
+}
+
+.mark {
+  font-family: var(--font-display);
+  font-size: var(--text-nav-mark);
+  font-weight: 500;
+  letter-spacing: var(--tracking-hero);
+  color: #fff;
+  opacity: 0.9;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xl);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.link {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #fff;
+  opacity: 0.9;
+  text-decoration: none;
+  white-space: nowrap;
+  transition:
+    opacity 250ms ease,
+    transform 250ms ease;
+}
+
+.link:hover,
+.link:focus-visible {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+.link.active {
+  opacity: 1;
+}
+
+.link.active::after {
+  content: "";
+  display: block;
+  margin-top: 4px;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.7;
+}
+
+.menuButton {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  padding: var(--space-2xs);
+  color: #fff;
+  cursor: pointer;
+}
+
+/* ---- Mobile drawer ---- */
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-mobile-drawer);
+  background: rgba(20, 18, 15, 0.5);
+  backdrop-filter: blur(2px);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  animation: fadeIn var(--duration-fast) var(--ease-out-soft);
+}
+
+.drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: calc(var(--z-mobile-drawer) + 1);
+  width: min(84vw, 360px);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
+  padding: var(--space-lg);
+  background-color: var(--color-ink);
+  transform: translateX(100%);
+  transition: transform var(--duration-base) var(--ease-luxury);
+}
+
+.drawerOpen {
+  transform: translateX(0);
+}
+
+.drawerHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.drawerHeader .mark {
+  opacity: 1;
+}
+
+.drawerLinks {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.drawerLink {
+  font-family: var(--font-display);
+  font-size: var(--text-h3);
+  color: var(--color-paper);
+  text-decoration: none;
+  opacity: 0.8;
+  transition: opacity var(--duration-fast) var(--ease-out-soft);
+}
+
+.drawerLink:hover,
+.drawerLink:focus-visible,
+.drawerLink.active {
+  opacity: 1;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 860px) {
+  .root {
+    padding: 30px var(--space-md) var(--space-sm);
+  }
+
+  .root[data-scrolled] {
+    padding-top: var(--space-md);
+    padding-bottom: var(--space-xs);
+  }
+
+  .links {
+    display: none;
+  }
+
+  .menuButton {
+    display: inline-flex;
+  }
+}

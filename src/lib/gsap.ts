@@ -1,14 +1,19 @@
-import gsap from "gsap";
+"use client";
+
+import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 
-if (typeof window !== "undefined") {
-  gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
+let registered = false;
+
+/**
+ * Registers GSAP plugins exactly once, client-side only. Every animation
+ * module should import `gsap` from here (not directly from "gsap") so
+ * plugin registration is guaranteed before any timeline is built.
+ */
+export function ensureGsapRegistered(): void {
+  if (registered || typeof window === "undefined") return;
+  gsap.registerPlugin(ScrollTrigger);
+  registered = true;
 }
 
-export function prefersReducedMotion() {
-  if (typeof window === "undefined") return false;
-  return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-}
-
-export { gsap, ScrollTrigger, MotionPathPlugin };
+export { gsap, ScrollTrigger };

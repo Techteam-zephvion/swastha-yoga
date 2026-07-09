@@ -1,0 +1,23 @@
+.scene {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: var(--color-sky-dawn-top);
+}
+
+/* Focal vignette — gently darkens the edges so the eye lands on the sun
+   at center rather than drifting to the frame. Static, not animated;
+   sits above every layer. */
+.vignette {
+  position: absolute;
+  inset: 0;
+  z-index: var(--z-chrome);
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse at 50% 48%,
+    transparent 38%,
+    rgba(20, 18, 15, 0.22) 88%,
+    rgba(20, 18, 15, 0.4) 100%
+  );
+}

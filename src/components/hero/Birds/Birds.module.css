@@ -1,0 +1,32 @@
+.root {
+  composes: fill from "../../../styles/layer-fill.module.css";
+}
+
+/* 10-frame illustrated flap-cycle sprite (traced from the client's own
+   reference artwork, not generated). The flap is intrinsic to the
+   asset, so it loops via a self-contained CSS steps() animation rather
+   than a GSAP scene timeline — birdTimeline only ever moves/flips this
+   element as a whole, never touches individual frames. */
+.bird {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 42px;
+  height: 41px;
+  opacity: 0;
+  transform-origin: 50% 50%;
+  will-change: transform, opacity;
+  background-image: url("/birds/bird-sprite.webp");
+  background-repeat: no-repeat;
+  background-size: 420px 41px;
+  animation: birdFlap 0.9s steps(9) infinite;
+}
+
+@keyframes birdFlap {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -378px 0;
+  }
+}

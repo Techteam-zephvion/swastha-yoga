@@ -1,0 +1,34 @@
+.wrapper {
+  height: 100%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+  transition: transform var(--duration-fast) var(--ease-out-soft);
+}
+
+a.card:hover,
+a.card:focus-visible {
+  transform: translateY(-4px);
+}
+
+.image {
+  position: relative;
+  transition: filter var(--duration-fast) var(--ease-out-soft);
+}
+
+a.card:hover .image,
+a.card:focus-visible .image {
+  filter: brightness(1.04);
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xs);
+}

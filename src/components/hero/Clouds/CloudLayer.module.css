@@ -1,0 +1,32 @@
+.root {
+  composes: fill from "../../../styles/layer-fill.module.css";
+  will-change: transform;
+}
+
+.root[data-depth="cloudFar"] {
+  color: var(--color-mist);
+  opacity: 0.38;
+  filter: blur(var(--blur-lg));
+}
+
+.root[data-depth="cloudMid"] {
+  color: var(--color-paper);
+  opacity: 0.5;
+  filter: blur(var(--blur-md));
+}
+
+.root[data-depth="cloudNear"] {
+  color: var(--color-paper);
+  opacity: 0.6;
+  filter: blur(var(--blur-sm));
+}
+
+.puffWrap {
+  position: absolute;
+}
+
+.puff {
+  display: block;
+  width: 100%;
+  height: 100%;
+}

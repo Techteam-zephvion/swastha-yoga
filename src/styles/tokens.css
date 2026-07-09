@@ -1,0 +1,158 @@
+/**
+ * Design tokens — the single source of truth for every visual constant
+ * used across the cinematic experience. No component should hardcode a
+ * color, duration, blur, shadow, or z-index; reference a variable here.
+ */
+
+:root {
+  /* ---------------------------------------------------------------- */
+  /* Color — muted sunrise / editorial palette. Deliberately desaturated
+     — warm ivory, dusty gold, muted peach, morning lavender — nothing
+     reads as a vivid travel-poster orange. */
+  /* ---------------------------------------------------------------- */
+  --color-sky-dawn-top: #3c3a56;
+  --color-sky-dawn-mid: #8d7f97;
+  --color-sky-dawn-low: #d9a978;
+  --color-sky-horizon: #f0dcc0;
+
+  --color-sun-core: #fbf1de;
+  --color-sun-glow: #e3b79a;
+
+  --color-ivory: #f3ead9;
+  --color-dusty-gold: #c9a877;
+  --color-muted-peach: #dcae93;
+  --color-morning-lavender: #9c93b3;
+  --color-lavender-deep: #726a8a;
+
+  --color-stone-light: #cfc8bd;
+  --color-stone-mid: #8f887f;
+  --color-stone-dark: #2c2925;
+
+  --color-water-deep: #1c2333;
+  --color-water-mid: #3c4257;
+
+  --color-mist: var(--color-ivory);
+
+  --color-ink: #3a362f; /* soft charcoal — typography */
+  --color-paper: #faf6ef;
+
+  --color-accent-gold: #c9a877;
+
+  /* ---------------------------------------------------------------- */
+  /* Spacing scale                                                     */
+  /* ---------------------------------------------------------------- */
+  --space-3xs: 0.25rem;
+  --space-2xs: 0.5rem;
+  --space-xs: 0.75rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+  --space-2xl: 6rem;
+  --space-3xl: 9rem;
+
+  /* ---------------------------------------------------------------- */
+  /* Typography                                                        */
+  /* ---------------------------------------------------------------- */
+  --font-display: var(--font-display-serif, "Georgia", serif);
+  --font-body: var(--font-body-sans, system-ui, sans-serif);
+
+  /* Desktop lands at ~110-140px; scales down gracefully on narrower
+     viewports instead of clamping to the max immediately. */
+  --text-hero: clamp(3.25rem, 5vw + 3rem, 8.75rem);
+  --text-subtitle: clamp(1.1rem, 0.5vw + 1rem, 1.35rem);
+  --text-nav-mark: clamp(1.125rem, 0.3vw + 1rem, 1.25rem);
+
+  /* Moderate heading scale for regular page content — distinct from
+     --text-hero, which is reserved for the homepage wordmark. */
+  --text-h1: clamp(2.5rem, 2vw + 2rem, 3.75rem);
+  --text-h2: clamp(1.9rem, 1.2vw + 1.6rem, 2.75rem);
+  --text-h3: clamp(1.4rem, 0.6vw + 1.2rem, 1.85rem);
+  --text-h4: clamp(1.15rem, 0.3vw + 1.05rem, 1.35rem);
+  --text-eyebrow: 0.8rem;
+  --text-body-sm: 0.9rem;
+  --text-body-md: 1.05rem;
+  --text-body-lg: 1.25rem;
+
+  --tracking-hero: 0.03em;
+  --tracking-subtitle: 0.28em;
+  --tracking-nav: 0.12em;
+  --tracking-eyebrow: 0.22em;
+
+  /* ---------------------------------------------------------------- */
+  /* Motion — durations & easing                                       */
+  /* ---------------------------------------------------------------- */
+  --duration-instant: 0.15s;
+  --duration-fast: 0.4s;
+  --duration-base: 0.8s;
+  --duration-slow: 1.8s;
+  --duration-ambient: 20s;
+
+  --ease-cinematic: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out-soft: cubic-bezier(0.65, 0, 0.35, 1);
+  /* "Luxury" ease for the logo rise / nav reveal — a long, gentle
+     deceleration with almost no overshoot. */
+  --ease-luxury: cubic-bezier(0.19, 1, 0.22, 1);
+
+  /* ---------------------------------------------------------------- */
+  /* Blur                                                               */
+  /* ---------------------------------------------------------------- */
+  --blur-none: 0px;
+  --blur-sm: 4px;
+  --blur-md: 12px;
+  --blur-lg: 28px;
+  --blur-xl: 48px;
+
+  /* ---------------------------------------------------------------- */
+  /* Radius — shared across Button/Card/Image                          */
+  /* ---------------------------------------------------------------- */
+  --radius-sm: 4px;
+  --radius-md: 10px;
+  --radius-lg: 20px;
+  --radius-pill: 999px;
+
+  /* ---------------------------------------------------------------- */
+  /* Layout — shared Section/Container widths                          */
+  /* ---------------------------------------------------------------- */
+  --container-max: 1240px;
+  --container-narrow: 780px;
+  --container-wide: 1440px;
+
+  /* ---------------------------------------------------------------- */
+  /* Glow / shadow                                                      */
+  /* ---------------------------------------------------------------- */
+  --glow-sun: 0 0 120px 40px rgba(227, 183, 154, 0.3);
+  --glow-soft: 0 0 60px 0 rgba(251, 241, 222, 0.22);
+
+  --shadow-elevated: 0 20px 60px -20px rgba(0, 0, 0, 0.45);
+  --shadow-subtle: 0 4px 24px -8px rgba(0, 0, 0, 0.2);
+
+  /* ---------------------------------------------------------------- */
+  /* Z-index layer scale — must match lib/layers.ts LAYER_REGISTRY     */
+  /* ---------------------------------------------------------------- */
+  --z-sky: 0;
+  --z-cloud-far: 10;
+  --z-cloud-mid: 20;
+  --z-cloud-near: 24;
+  --z-sunlight: 28;
+  --z-mountains-far: 32;
+  --z-logo: 40;
+  --z-subtitle: 42;
+  --z-mountains-near: 46;
+  --z-fog: 50;
+  --z-particles: 54;
+  --z-cta: 58;
+  --z-birds: 62;
+  --z-scroll-indicator: 64;
+  --z-nav: 80;
+  --z-chrome: 100;
+
+  /* ---------------------------------------------------------------- */
+  /* Z-index — global site chrome (nav/footer/transitions live outside  */
+  /* the hero scene's own layer registry, in the root layout)           */
+  /* ---------------------------------------------------------------- */
+  --z-site-nav: 80;
+  --z-mobile-drawer: 90;
+  --z-page-transition: 95;
+}
