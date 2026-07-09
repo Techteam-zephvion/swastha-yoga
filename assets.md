@@ -108,6 +108,19 @@ Yoga master Gandharva Natesh's degree/award certificates, forwarded by Manjunath
 |---|---|---|---|---|
 | swastha-yoga-flyer.jpeg | 1068x1600 | JPEG | 468K | Swastha Yoga Therapy & Prenatal Centre promo flyer — class types, timings, contact 7204888573, Girinagar, Bengaluru |
 
+## manjunath_poojari_whatsapp/images/founders/ (6 files)
+
+Photos of the two Swastha Yoga founders (individually, together, and with the wider teaching team), plus award/recognition moments. Sourced from `WhatsApp Unknown 2026-07-09 at 11.28.03 AM.zip` (9 files) — 3 of the 9 were exact duplicates of images already in `group-photos/` and `guru/` (verified by checksum) and were not re-added.
+
+| File | Dimensions | Format | Size | Description |
+|---|---|---|---|---|
+| founders-portrait-couple.jpeg | 1200x1600 | JPEG | 195K | The two founders together, smiling, studio terrace with a framed Shiva image behind them |
+| founders-team-inhale-exhale-tshirts.jpeg | 1600x1200 | JPEG | 174K | Three instructors (both founders + one more) in matching white "Swastha Yoga — Inhale Exhale" branded t-shirts, in front of the studio's bamboo Om backdrop |
+| founder-teaching-kids-class.jpeg | 1600x1200 | JPEG | 166K | A founder on the studio's wooden platform, teaching a children's class |
+| student-respect-gesture.jpeg | 1200x1600 | JPEG | 154K | A student kneeling to touch the feet of a founder in a traditional gesture of respect, studio interior |
+| yoga-academy-karnataka-trophy-presentation.jpeg | 1599x1200 | JPEG | 232K | A founder receiving a trophy/certificate from a police officer on stage at the "Yoga Academy of Karnataka" 15th South Indian Yogasana Championship, Dec 2017 |
+| yoga-academy-karnataka-certificate-portrait.jpeg | 1200x1599 | JPEG | 225K | Solo portrait of the same founder holding her certificate and trophy from the championship event above |
+
 ## manjunath_poojari_whatsapp/images/group-photos/ (3 files)
 
 | File | Dimensions | Format | Size | Description |
@@ -151,4 +164,4 @@ Derived crops/cutouts of the Bali gate photo, generated for use as hero/parallax
 
 ---
 
-**Totals:** 83 image files — 58 in `design-assets/` (brand + flowers + leaves + wood), 25 in `manjunath_poojari_whatsapp/images/`.
+**Totals:** 89 image files — 58 in `design-assets/` (brand + flowers + leaves + wood), 31 in `manjunath_poojari_whatsapp/images/`.
