@@ -39,4 +39,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-scripts/hero-assets/.venv/
+
+# python asset pipeline (tools/)
+.venv/
+__pycache__/
+*.pyc
+tools/output/assets/*
+!tools/output/assets/.gitkeep
