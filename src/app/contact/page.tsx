@@ -5,12 +5,13 @@ import { ConsultationForm } from "@/components/contact/ConsultationForm/Consulta
 import { ClinicInfo } from "@/components/contact/ClinicInfo/ClinicInfo";
 import { MapSection } from "@/components/contact/MapSection/MapSection";
 import { FAQ } from "@/components/contact/FAQ/FAQ";
-import { ClosingCTA } from "@/components/contact/ClosingCTA/ClosingCTA";
+import { ClosingCTA } from "@/components/ui/ClosingCTA/ClosingCTA";
 
 export const metadata: Metadata = {
-  title: "Contact — Swastha Yoga",
+  title: "Contact",
   description:
     "Reach Swastha Yoga by WhatsApp, phone, or email, or book a consultation directly — therapy and prenatal care in Girinagar, Bengaluru.",
+  alternates: { canonical: "/contact" },
 };
 
 export default function ContactPage() {
@@ -27,7 +28,13 @@ export default function ContactPage() {
       <ClinicInfo />
       <MapSection />
       <FAQ />
-      <ClosingCTA />
+      <ClosingCTA
+        heading="You Don’t Have to Have It Figured Out"
+        text="Reaching out is often the hardest part. Whatever you’re carrying, we’ll meet you there and figure out the rest together."
+        primary={{ label: "Book Your Consultation", href: "#consultation-form" }}
+        secondary={{ label: "Call Us Now", href: "tel:+917204888573" }}
+        tone="transparent"
+      />
     </main>
   );
 }

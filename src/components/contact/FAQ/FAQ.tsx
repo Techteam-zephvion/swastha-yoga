@@ -62,6 +62,7 @@ export function FAQ() {
             <Reveal key={item.question} delay={i * 0.04} className={styles.item}>
               <button
                 type="button"
+                id={`faq-trigger-${i}`}
                 className={styles.trigger}
                 aria-expanded={isOpen}
                 aria-controls={`faq-panel-${i}`}
@@ -81,6 +82,7 @@ export function FAQ() {
               <div
                 id={`faq-panel-${i}`}
                 role="region"
+                aria-labelledby={`faq-trigger-${i}`}
                 className={styles.panel}
                 data-open={isOpen}
               >
