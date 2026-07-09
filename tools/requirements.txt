@@ -1,0 +1,16 @@
+# Dev-only asset pipeline dependencies. Never imported by the Next.js app
+# or shipped to production — see tools/README.md.
+#
+# Pin with: pip install -r tools/requirements.txt
+
+opencv-python>=4.10
+Pillow>=10.4
+numpy>=1.26
+scikit-image>=0.24
+rembg>=2.0
+imageio>=2.35
+PyYAML>=6.0
+
+# Optional, heavier models — install manually when a script needs them.
+# realesrgan-ncnn-py>=1.2   # Real-ESRGAN upscaling
+# segment-anything>=1.0     # Meta SAM, precision masking

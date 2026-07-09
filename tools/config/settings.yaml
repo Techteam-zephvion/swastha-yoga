@@ -1,0 +1,37 @@
+# Central configuration for the tools/ asset pipeline.
+# Scripts in preprocess/, generate/, and export/ read this file instead of
+# hardcoding paths or quality settings — keep it as the single source of
+# truth for pipeline behavior.
+
+paths:
+  # Raw, unprocessed source imagery (photos, design exports).
+  source: "assets"
+  # Intermediate pipeline output, before final export.
+  working: "tools/output/assets"
+  # Final optimized assets consumed by the Next.js app.
+  public: "public"
+  # Manifest consumed by src/lib/assetManifest.ts.
+  manifest: "public/asset-manifest.json"
+
+image:
+  # Target formats generated per source asset, in preference order.
+  formats: ["avif", "webp", "png"]
+  png:
+    compression_level: 9
+  webp:
+    quality: 82
+    lossless: false
+  avif:
+    quality: 60
+
+mipmaps:
+  # Relative scale factors generated for each responsive breakpoint.
+  scales: [1, 0.75, 0.5, 0.25]
+
+background_removal:
+  model: "isnet-general-use" # rembg model name
+
+color_grade:
+  # Placeholder for the sunrise/dawn grading LUT applied to gate + sky
+  # source photography. Populated once a LUT is chosen.
+  lut: null
