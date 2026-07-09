@@ -1,0 +1,99 @@
+.header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xs);
+  margin-bottom: var(--space-xl);
+}
+
+.intro {
+  margin-top: var(--space-2xs);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-lg);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xs);
+}
+
+.label {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  letter-spacing: var(--tracking-nav);
+  text-transform: uppercase;
+  color: var(--color-ink);
+  opacity: 0.65;
+}
+
+.optional {
+  text-transform: none;
+  letter-spacing: normal;
+  opacity: 0.8;
+}
+
+.input {
+  font-family: var(--font-body);
+  font-size: var(--text-body-md);
+  color: var(--color-ink);
+  background-color: var(--color-paper);
+  border: 1px solid rgba(58, 54, 47, 0.25);
+  border-radius: var(--radius-md);
+  padding: 0.85rem 1rem;
+  transition:
+    border-color var(--duration-fast) ease,
+    box-shadow var(--duration-fast) ease;
+}
+
+.input:focus-visible,
+.input:focus {
+  outline: none;
+  border-color: var(--color-dusty-gold);
+  box-shadow: 0 0 0 3px rgba(201, 168, 119, 0.18);
+}
+
+textarea.input {
+  resize: vertical;
+  min-height: 8rem;
+  font-family: var(--font-body);
+}
+
+.submit {
+  align-self: flex-start;
+  margin-top: var(--space-xs);
+}
+
+.confirmation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xs);
+  text-align: center;
+  padding-block: var(--space-xl);
+}
+
+.confirmIcon {
+  color: var(--color-dusty-gold);
+}
+
+.confirmText {
+  max-width: 42ch;
+}
+
+@media (max-width: 640px) {
+  .row {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+}
