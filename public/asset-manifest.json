@@ -1,0 +1,6 @@
+{
+  "$schemaVersion": 1,
+  "background": "/hero/background.webp",
+  "sunlightOverlay": "/hero/sunlight-overlay.svg",
+  "wordmark": "/hero/wordmark.webp"
+}
