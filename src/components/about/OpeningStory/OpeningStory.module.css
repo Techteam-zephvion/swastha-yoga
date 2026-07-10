@@ -1,0 +1,26 @@
+.section {
+  padding-block: var(--space-3xl);
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-lg);
+  text-align: center;
+}
+
+.kicker {
+  max-width: 34ch;
+}
+
+.line {
+  max-width: 20ch;
+  line-height: 1.2;
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding-block: var(--space-2xl);
+  }
+}

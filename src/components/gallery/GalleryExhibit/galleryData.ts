@@ -1,0 +1,366 @@
+export type GalleryCategory = "Practice" | "Teaching" | "Community" | "Recognition" | "Journey";
+
+export const CATEGORIES: readonly (GalleryCategory | "All")[] = [
+  "All",
+  "Practice",
+  "Teaching",
+  "Community",
+  "Recognition",
+  "Journey",
+] as const;
+
+export interface GalleryPhoto {
+  id: string;
+  src: string;
+  alt: string;
+  caption: string;
+  category: GalleryCategory;
+  ratio: "portrait" | "landscape" | "square";
+}
+
+/** A larger curated set than the original nine — still hand-picked, not
+ *  every available photo, but wide enough to read as a real archive.
+ *  Order matters: no two photos from the same category sit next to each
+ *  other in the unfiltered view. */
+export const PHOTOS: GalleryPhoto[] = [
+  {
+    id: "class-group",
+    src: "/about/community/class-group.webp",
+    alt: "A full class of students together at the Swastha Yoga studio",
+    caption: "Every class starts as strangers and ends as a room that knows itself.",
+    category: "Community",
+    ratio: "landscape",
+  },
+  {
+    id: "practice-adiyogi",
+    src: "/about/journey/practice-adiyogi.webp",
+    alt: "Gandharva in a yoga pose before the Adiyogi Shiva statue",
+    caption: "A backbend before Adiyogi — practice as devotion, not performance.",
+    category: "Practice",
+    ratio: "portrait",
+  },
+  {
+    id: "team-portrait",
+    src: "/about/community/team-portrait.webp",
+    alt: "Gandharva with three fellow instructors at the studio",
+    caption: "What started as one teacher became a team.",
+    category: "Community",
+    ratio: "landscape",
+  },
+  {
+    id: "practice-backbend-closeup",
+    src: "/gallery/practice-backbend-closeup.webp",
+    alt: "Close-up of a student in a deep backbend stretch",
+    caption: "The kind of stretch that only comes after years of showing up.",
+    category: "Practice",
+    ratio: "portrait",
+  },
+  {
+    id: "today-class",
+    src: "/about/journey/today-class.webp",
+    alt: "Students practicing together at the studio today",
+    caption: "Still one relationship at a time.",
+    category: "Community",
+    ratio: "landscape",
+  },
+  {
+    id: "class-forward-fold-row",
+    src: "/gallery/class-forward-fold-row.webp",
+    alt: "A full class in a seated forward-fold, colorful mats lining the floor",
+    caption: "Stillness practiced as a group.",
+    category: "Practice",
+    ratio: "landscape",
+  },
+  {
+    id: "respect-gesture",
+    src: "/gallery/respect-gesture.webp",
+    alt: "A quiet, personal moment shared at the studio",
+    caption: "A quiet gesture of respect, caught candidly, not staged.",
+    category: "Community",
+    ratio: "portrait",
+  },
+  {
+    id: "practice-cobra-row",
+    src: "/gallery/practice-cobra-row.webp",
+    alt: "A row of students in cobra pose",
+    caption: "Cobra pose, repeated until it stops being effort.",
+    category: "Practice",
+    ratio: "landscape",
+  },
+  {
+    id: "class-sidebend-row",
+    src: "/gallery/class-sidebend-row.webp",
+    alt: "A full class in a side-bend stretch on the studio's wooden platform, gold Om backdrop",
+    caption: "A whole room bends the same way, at its own pace.",
+    category: "Community",
+    ratio: "landscape",
+  },
+  {
+    id: "practice-boat-pose",
+    src: "/gallery/practice-boat-pose.webp",
+    alt: "A row of students holding boat pose",
+    caption: "The pose that tests patience more than strength.",
+    category: "Practice",
+    ratio: "portrait",
+  },
+  {
+    id: "class-angle-stretch",
+    src: "/gallery/class-angle-stretch.webp",
+    alt: "Students in a side-angle stretch, layered across the room",
+    caption: "No two bodies open the same way.",
+    category: "Community",
+    ratio: "portrait",
+  },
+  {
+    id: "practice-cobra-focus",
+    src: "/gallery/practice-cobra-focus.webp",
+    alt: "A student in sharp focus holding cobra pose",
+    caption: "One breath, one lift.",
+    category: "Practice",
+    ratio: "portrait",
+  },
+  {
+    id: "class-standing-stretch",
+    src: "/gallery/class-standing-stretch.webp",
+    alt: "Students in a standing stretch beside a wall of colorful mats and a Shiva poster",
+    caption: "Ordinary Tuesday, extraordinary discipline.",
+    category: "Community",
+    ratio: "portrait",
+  },
+  {
+    id: "practice-legsup-light",
+    src: "/gallery/practice-legsup-light.webp",
+    alt: "Students in legs-up-the-wall pose in warm window light",
+    caption: "The easiest pose is sometimes the hardest to allow.",
+    category: "Practice",
+    ratio: "landscape",
+  },
+  {
+    id: "class-sidebend-glance",
+    src: "/gallery/class-sidebend-glance.webp",
+    alt: "Students in a standing side-bend row, one glancing toward the camera",
+    caption: "Caught mid-breath, not mid-pose.",
+    category: "Community",
+    ratio: "landscape",
+  },
+  {
+    id: "practice-bridge-row",
+    src: "/gallery/practice-bridge-row.webp",
+    alt: "A row of students holding bridge pose in evening light",
+    caption: "Held a little longer than it looks like it should be.",
+    category: "Practice",
+    ratio: "portrait",
+  },
+  {
+    id: "class-plow-row",
+    src: "/gallery/class-plow-row.webp",
+    alt: "A mixed-age group of students in plow pose",
+    caption: "Every generation finds its way upside down.",
+    category: "Community",
+    ratio: "landscape",
+  },
+  {
+    id: "teaching-kids",
+    src: "/about/journey/teaching-kids-class.webp",
+    alt: "Gandharva teaching a children's yoga class on the studio's wooden platform",
+    caption: "The youngest students ask the most honest questions.",
+    category: "Teaching",
+    ratio: "landscape",
+  },
+  {
+    id: "class-downdog-om",
+    src: "/gallery/class-downdog-om.webp",
+    alt: "A small casual class in downward-dog beneath a gold Om backdrop",
+    caption: "Fewer people, same devotion.",
+    category: "Community",
+    ratio: "landscape",
+  },
+  {
+    id: "practice-bow-row",
+    src: "/gallery/practice-bow-row.webp",
+    alt: "A row of students in bow pose, sharp foreground focus",
+    caption: "Bow pose — opening the front of the body on purpose.",
+    category: "Practice",
+    ratio: "portrait",
+  },
+  {
+    id: "class-warrior-twist",
+    src: "/gallery/class-warrior-twist.webp",
+    alt: "Students in casual clothes holding a warrior twist",
+    caption: "You don't need the right outfit to do the work.",
+    category: "Community",
+    ratio: "landscape",
+  },
+  {
+    id: "class-backbend-row",
+    src: "/gallery/class-backbend-row.webp",
+    alt: "A full class in a synchronized backbend row, framed by a window view",
+    caption: "Teaching a room to move as one, without losing anyone.",
+    category: "Teaching",
+    ratio: "landscape",
+  },
+  {
+    id: "community-group-meditation",
+    src: "/gallery/community-group-meditation.webp",
+    alt: "A large group seated in meditation in symmetric rows beneath a gold Om backdrop",
+    caption: "A room full of people choosing to sit still together.",
+    category: "Community",
+    ratio: "landscape",
+  },
+  {
+    id: "practice-downdog-solo",
+    src: "/gallery/practice-downdog-solo.webp",
+    alt: "A solo practitioner in downward-dog directly beneath a backlit gold Om sign",
+    caption: "Alone in the room, never alone in the practice.",
+    category: "Practice",
+    ratio: "portrait",
+  },
+  {
+    id: "journey-lake",
+    src: "/gallery/journey-mountain-lake.webp",
+    alt: "Gandharva in a handstand beside a mountain lake in Ladakh",
+    caption: "A handstand at 4,200 meters — the practice travels wherever discipline does.",
+    category: "Journey",
+    ratio: "portrait",
+  },
+  {
+    id: "class-forwardfold-om",
+    src: "/gallery/class-forwardfold-om.webp",
+    alt: "A class in a standing forward-fold with hands clasped, gold Om backdrop",
+    caption: "The fold that asks for nothing but gravity.",
+    category: "Community",
+    ratio: "landscape",
+  },
+  {
+    id: "teaching-cobra-boy",
+    src: "/gallery/teaching-cobra-boy.webp",
+    alt: "A young boy in cobra pose in the foreground of a class",
+    caption: "The youngest bodies learn the oldest shapes.",
+    category: "Teaching",
+    ratio: "landscape",
+  },
+  {
+    id: "guru-certificate",
+    src: "/guru/guru-certificate-portrait.webp",
+    alt: "The guru holding her championship certificate and trophy",
+    caption: "Recognition that predates the studio by years.",
+    category: "Recognition",
+    ratio: "portrait",
+  },
+  {
+    id: "practice-pair-meditation",
+    src: "/gallery/practice-pair-meditation.webp",
+    alt: "Two men meditating closely together in window light",
+    caption: "Meditation doesn't require distance from other people.",
+    category: "Practice",
+    ratio: "portrait",
+  },
+  {
+    id: "journey-trishul",
+    src: "/gallery/journey-trishul.webp",
+    alt: "Gandharva meditating beneath a mountain trishul",
+    caption: "Meditation beneath a summit trishul — the practice was never only physical.",
+    category: "Journey",
+    ratio: "portrait",
+  },
+  {
+    id: "class-sideangle-window",
+    src: "/gallery/class-sideangle-window.webp",
+    alt: "Students in extended side-angle pose in natural window light",
+    caption: "Late afternoon light finds the pose too.",
+    category: "Community",
+    ratio: "landscape",
+  },
+  {
+    id: "teaching-thumbsup",
+    src: "/about/journey/teaching-thumbsup.webp",
+    alt: "A class in knee-hug pose, instructor standing and giving a thumbs-up",
+    caption: "Correction doesn't always need words.",
+    category: "Teaching",
+    ratio: "landscape",
+  },
+  {
+    id: "founder-onelegged-fold",
+    src: "/about/journey/founder-onelegged-fold.webp",
+    alt: "Gandharva in a one-legged forward-bend silhouette against a brick wall",
+    caption: "Balance practiced in silhouette, with no one to perform for.",
+    category: "Journey",
+    ratio: "landscape",
+  },
+  {
+    id: "teaching-locust-boy",
+    src: "/about/journey/teaching-locust-boy.webp",
+    alt: "A young boy in locust pose in the foreground of a class",
+    caption: "Locust pose looks different on a child's body, and that's fine.",
+    category: "Teaching",
+    ratio: "landscape",
+  },
+  {
+    id: "community-butterfly-fold",
+    src: "/about/journey/community-butterfly-fold.webp",
+    alt: "A wide shot of a full class in butterfly-fold, natural light filling the room",
+    caption: "A full room, folded forward, in unison.",
+    category: "Community",
+    ratio: "landscape",
+  },
+  {
+    id: "teaching-warrior-correction",
+    src: "/about/journey/teaching-warrior-correction.webp",
+    alt: "An instructor in a maroon shirt correcting a student's warrior-twist pose",
+    caption: "The adjustment that matters most is usually the smallest one.",
+    category: "Teaching",
+    ratio: "landscape",
+  },
+  {
+    id: "founder-standing-fold-home",
+    src: "/about/journey/founder-standing-fold-home.webp",
+    alt: "Gandharva in a deep standing forward bend in a home altar room",
+    caption: "The practice doesn't need a studio to happen.",
+    category: "Journey",
+    ratio: "portrait",
+  },
+  {
+    id: "teaching-butterfly-assist",
+    src: "/about/journey/teaching-butterfly-assist.webp",
+    alt: "An instructor giving a hands-on assist to a student in butterfly-fold",
+    caption: "Teaching, most of the time, means putting your hands where they're needed.",
+    category: "Teaching",
+    ratio: "landscape",
+  },
+  {
+    id: "teaching-quiet-fold",
+    src: "/about/journey/teaching-quiet-fold.webp",
+    alt: "Students in quiet seated forward-folds in a calm corner of the studio",
+    caption: "Not every moment in a class needs an audience.",
+    category: "Practice",
+    ratio: "landscape",
+  },
+];
+
+export type StoryMoment =
+  | { kind: "quote"; afterId: string; text: string }
+  | { kind: "reflection"; afterId: string; eyebrow: string; text: string }
+  | { kind: "photo"; afterId: string; src: string; alt: string; caption: string };
+
+/** Full-width breaks in the masonry — only shown in the unfiltered "All"
+ *  view, so filtering to one category never has to account for them. */
+export const STORY_MOMENTS: StoryMoment[] = [
+  {
+    kind: "quote",
+    afterId: "teaching-kids",
+    text: "Teach the person, not the pose.",
+  },
+  {
+    kind: "reflection",
+    afterId: "team-portrait",
+    eyebrow: "A Reflection",
+    text: "Most of what you see here didn't happen in front of a camera. It happened in ordinary sessions, over years, with people who kept coming back — the photographs just happened to catch a few of them.",
+  },
+  {
+    kind: "photo",
+    afterId: "today-class",
+    src: "/gallery/portrait-warmth.webp",
+    alt: "A warm, personal portrait moment at the studio",
+    caption: "The relationships behind the practice are just as real as the poses.",
+  },
+];

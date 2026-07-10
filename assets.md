@@ -129,6 +129,61 @@ Photos of the two Swastha Yoga founders (individually, together, and with the wi
 | WhatsApp Image 2026-07-08 at 10.48.11 AM (1).jpeg | 1600x1200 | JPEG | 200K | Award/plaque presentation — guru in yellow robe receiving a "Swastha Yoga" plaque, 4 others present |
 | WhatsApp Image 2026-07-08 at 10.48.11 AM (2).jpeg | 1600x1200 | JPEG | 212K | Duplicate/near-duplicate of the guru plaque presentation photo |
 
+## manjunath_poojari_whatsapp/images/session-2026-07-02-team-and-class/ (24 files)
+
+Additional photos from the same studio/session as `founders/` and `group-photos/` (same teal-wall room, bamboo/gold Om backdrop). Sourced from `WhatsApp Unknown 2026-07-10 at 1.45.04 AM.zip` (34 files) — 10 of the 34 were exact duplicates of images already in `founders/`, `group-photos/`, and `guru/` (verified by checksum) and were not re-added. Landscape frames are full-room group/class shots; portrait frames are closer team-portrait or small-group shots. Individual captions not yet written — view directly before using any of these on a page.
+
+| File | Dimensions | Format | Size |
+|---|---|---|---|
+| WhatsApp Image 2026-07-02 at 11.38.26 AM.jpeg | 1600x1066 | JPEG | 114K |
+| WhatsApp Image 2026-07-02 at 11.38.26 AM (1).jpeg | 1600x1066 | JPEG | 151K |
+| WhatsApp Image 2026-07-02 at 11.38.26 AM (2).jpeg | 1066x1600 | JPEG | 102K |
+| WhatsApp Image 2026-07-02 at 11.38.26 AM (3).jpeg | 1066x1600 | JPEG | 102K |
+| WhatsApp Image 2026-07-02 at 11.38.27 AM.jpeg | 1600x1066 | JPEG | 162K |
+| WhatsApp Image 2026-07-02 at 11.38.27 AM (1).jpeg | 1066x1600 | JPEG | 139K |
+| WhatsApp Image 2026-07-02 at 11.38.27 AM (2).jpeg | 1066x1600 | JPEG | 124K |
+| WhatsApp Image 2026-07-02 at 11.38.27 AM (3).jpeg | 1600x1066 | JPEG | 144K |
+| WhatsApp Image 2026-07-02 at 11.38.27 AM (4).jpeg | 1600x1066 | JPEG | 170K |
+| WhatsApp Image 2026-07-02 at 11.38.28 AM.jpeg | 1600x1066 | JPEG | 115K |
+| WhatsApp Image 2026-07-02 at 11.38.28 AM (1).jpeg | 1600x1066 | JPEG | 171K |
+| WhatsApp Image 2026-07-02 at 11.38.28 AM (2).jpeg | 1600x1066 | JPEG | 156K |
+| WhatsApp Image 2026-07-02 at 11.38.28 AM (3).jpeg | 1066x1600 | JPEG | 153K |
+| WhatsApp Image 2026-07-02 at 11.38.29 AM.jpeg | 1600x1066 | JPEG | 165K |
+| WhatsApp Image 2026-07-02 at 11.38.29 AM (1).jpeg | 1600x1066 | JPEG | 139K |
+| WhatsApp Image 2026-07-02 at 11.38.29 AM (2).jpeg | 1066x1600 | JPEG | 150K — group cobra/Bhujangasana pose, full class, mountain-Shiva poster visible |
+| WhatsApp Image 2026-07-02 at 11.38.29 AM (3).jpeg | 1600x1066 | JPEG | 162K |
+| WhatsApp Image 2026-07-02 at 11.38.30 AM.jpeg | 1066x1600 | JPEG | 136K |
+| WhatsApp Image 2026-07-02 at 11.38.30 AM (1).jpeg | 1600x1066 | JPEG | 163K |
+| WhatsApp Image 2026-07-02 at 11.38.30 AM (2).jpeg | 1600x1066 | JPEG | 124K |
+| WhatsApp Image 2026-07-02 at 11.38.30 AM (3).jpeg | 1066x1600 | JPEG | 123K |
+| WhatsApp Image 2026-07-02 at 11.38.31 AM.jpeg | 1600x1066 | JPEG | 160K |
+| WhatsApp Image 2026-07-02 at 11.38.31 AM (1).jpeg | 1600x1066 | JPEG | 164K |
+| WhatsApp Image 2026-07-02 at 11.38.31 AM (2).jpeg | 1600x1066 | JPEG | 154K — four-person team portrait (Gandharva + 3 instructors), gold Om backdrop |
+
+## manjunath_poojari_whatsapp/images/session-2026-07-02-studio-b/ (17 files)
+
+A different, larger studio from the rest of this project's photos (marble floor, floor-to-ceiling windows, greenery visible outside, different Om signage) — likely a second branch or a one-off event space, not yet confirmed which. Sourced from `WhatsApp Unknown 2026-07-10 at 1.45.18 AM.zip` (17 files), all unique (no duplicates found against the rest of the project). Includes one solo practice pose (handstand against a red brick wall) and several full-class group shots (extended-triangle / Trikonasana pose, ~20 people). Individual captions not yet written — view directly before using any of these on a page.
+
+| File | Dimensions | Format | Size |
+|---|---|---|---|
+| WhatsApp Image 2026-07-02 at 11.37.26 AM.jpeg | 1199x1600 | JPEG | 178K — solo handstand pose, red brick wall |
+| WhatsApp Image 2026-07-02 at 11.37.26 AM (1).jpeg | 1600x1200 | JPEG | 267K |
+| WhatsApp Image 2026-07-02 at 11.37.26 AM (2).jpeg | 1600x1200 | JPEG | 186K |
+| WhatsApp Image 2026-07-02 at 11.37.26 AM (3).jpeg | 1600x1200 | JPEG | 186K |
+| WhatsApp Image 2026-07-02 at 11.37.27 AM.jpeg | 1600x1200 | JPEG | 198K |
+| WhatsApp Image 2026-07-02 at 11.37.27 AM (1).jpeg | 1600x1200 | JPEG | 171K |
+| WhatsApp Image 2026-07-02 at 11.37.27 AM (2).jpeg | 960x1280 | JPEG | 97K |
+| WhatsApp Image 2026-07-02 at 11.37.27 AM (3).jpeg | 1600x1200 | JPEG | 132K |
+| WhatsApp Image 2026-07-02 at 11.37.28 AM.jpeg | 1600x1200 | JPEG | 142K |
+| WhatsApp Image 2026-07-02 at 11.37.28 AM (1).jpeg | 1600x1200 | JPEG | 136K |
+| WhatsApp Image 2026-07-02 at 11.37.28 AM (2).jpeg | 1600x1200 | JPEG | 163K — full class, extended-triangle pose, ~20 people |
+| WhatsApp Image 2026-07-02 at 11.37.28 AM (3).jpeg | 1200x1600 | JPEG | 102K |
+| WhatsApp Image 2026-07-02 at 11.37.29 AM.jpeg | 1600x1200 | JPEG | 165K — full class, seated meditation, ~20 people |
+| WhatsApp Image 2026-07-02 at 11.37.29 AM (1).jpeg | 1600x1200 | JPEG | 175K |
+| WhatsApp Image 2026-07-02 at 11.37.29 AM (2).jpeg | 1600x1200 | JPEG | 137K |
+| WhatsApp Image 2026-07-02 at 11.37.29 AM (3).jpeg | 960x1280 | JPEG | 93K |
+| WhatsApp Image 2026-07-02 at 11.37.29 AM (4).jpeg | 1600x1200 | JPEG | 173K |
+
 ## manjunath_poojari_whatsapp/images/guru/ (1 file)
 
 | File | Dimensions | Format | Size | Description |
@@ -164,4 +219,4 @@ Derived crops/cutouts of the Bali gate photo, generated for use as hero/parallax
 
 ---
 
-**Totals:** 89 image files — 58 in `design-assets/` (brand + flowers + leaves + wood), 31 in `manjunath_poojari_whatsapp/images/`.
+**Totals:** 130 image files — 58 in `design-assets/` (brand + flowers + leaves + wood), 72 in `manjunath_poojari_whatsapp/images/`.

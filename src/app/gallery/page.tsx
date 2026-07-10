@@ -1,29 +1,35 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/layout/PageHero/PageHero";
-import { Section } from "@/components/ui/Section/Section";
-import { Reveal } from "@/components/ui/Reveal/Reveal";
-import { Text } from "@/components/ui/Typography/Text";
+import { GalleryIntro } from "@/components/gallery/GalleryIntro/GalleryIntro";
+import { GalleryExhibit } from "@/components/gallery/GalleryExhibit/GalleryExhibit";
+import { RecognitionHighlight } from "@/components/gallery/RecognitionHighlight/RecognitionHighlight";
+import { ClosingCTA } from "@/components/ui/ClosingCTA/ClosingCTA";
 
 export const metadata: Metadata = {
   title: "Gallery",
+  description:
+    "A visual journal of practice, teaching, community, and recognition at Swastha Yoga — the people and moments behind a decade of practice.",
   alternates: { canonical: "/gallery" },
 };
 
-/** Placeholder page proving out the shared framework (PageHero,
- *  Section, Reveal, Typography) — real content comes in a later pass. */
 export default function GalleryPage() {
   return (
     <main>
       <PageHero
         title="Gallery"
         eyebrow="Swastha Yoga"
+        description="A visual journal of practice, teaching, community, and lifelong learning."
         breadcrumbItems={[{ label: "Home", href: "/" }, { label: "Gallery" }]}
       />
-      <Section spacing="lg" tone="paper">
-        <Reveal>
-          <Text color="muted">Page content coming soon.</Text>
-        </Reveal>
-      </Section>
+      <GalleryIntro />
+      <GalleryExhibit />
+      <RecognitionHighlight />
+      <ClosingCTA
+        heading="Begin Your Journey"
+        text="Whatever brought you here, there's a place to start."
+        primary={{ label: "Book Consultation", href: "/contact" }}
+        secondary={{ label: "Contact Us", href: "/contact" }}
+      />
     </main>
   );
 }

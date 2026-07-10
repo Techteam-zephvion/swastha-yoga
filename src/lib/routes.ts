@@ -12,6 +12,7 @@ export interface RouteDefinition {
 export const ROUTES: readonly RouteDefinition[] = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
+  { label: "Guru", href: "/guru" },
   { label: "Therapies", href: "/therapies" },
   { label: "Gallery", href: "/gallery" },
   { label: "Contact", href: "/contact" },

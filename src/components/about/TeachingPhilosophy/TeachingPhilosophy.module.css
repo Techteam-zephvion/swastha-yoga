@@ -1,0 +1,39 @@
+.section {
+  padding-block: var(--space-3xl);
+}
+
+.eyebrow {
+  text-align: center;
+  margin-bottom: var(--space-2xl);
+}
+
+.words {
+  display: flex;
+  flex-direction: column;
+}
+
+.wordRow {
+  display: flex;
+  justify-content: center;
+  padding-block: var(--space-xl);
+  border-top: 1px solid rgba(58, 54, 47, 0.14);
+}
+
+.wordRow:last-child {
+  border-bottom: 1px solid rgba(58, 54, 47, 0.14);
+}
+
+.word {
+  margin: 0;
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding-block: var(--space-2xl);
+  }
+
+  .wordRow {
+    padding-block: var(--space-lg);
+  }
+}

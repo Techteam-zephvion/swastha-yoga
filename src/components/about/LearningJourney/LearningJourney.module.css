@@ -1,0 +1,179 @@
+.header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xs);
+  margin-bottom: var(--space-2xl);
+}
+
+.intro {
+  max-width: 52ch;
+  margin: var(--space-xs) auto 0;
+}
+
+.chapters {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
+}
+
+.chapter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chapterLabel {
+  margin-bottom: var(--space-md);
+}
+
+.chapterLabelText {
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-nav);
+  font-size: 0.8rem;
+  color: var(--color-ink);
+  opacity: 0.6;
+}
+
+.wall {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: var(--space-lg) var(--space-md);
+  width: 100%;
+  padding: var(--space-lg) var(--space-sm);
+}
+
+.tileWrap,
+.tileSpotlightWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2xs);
+}
+
+.tileWrap {
+  width: 168px;
+}
+
+.tileSpotlightWrap {
+  width: 240px;
+}
+
+.tile {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  padding: 0;
+  border: 1px solid rgba(58, 54, 47, 0.14);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background-color: var(--color-paper);
+  box-shadow: var(--shadow-subtle);
+  cursor: pointer;
+  transition: box-shadow var(--duration-fast) var(--ease-out-soft);
+}
+
+.tile:hover,
+.tile:focus-visible {
+  box-shadow: var(--shadow-elevated);
+  outline: none;
+}
+
+.tile:focus-visible {
+  box-shadow:
+    0 0 0 3px rgba(201, 168, 119, 0.4),
+    var(--shadow-elevated);
+}
+
+.tileImage {
+  object-fit: cover;
+}
+
+.tileCaption {
+  letter-spacing: 0.04em;
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+  padding: var(--space-lg);
+  background-color: rgba(20, 18, 15, 0.9);
+  cursor: zoom-out;
+  animation: fadeIn var(--duration-fast) var(--ease-out-soft);
+}
+
+.lightboxFrame {
+  position: relative;
+  width: min(90vw, 720px);
+  max-height: 70vh;
+  aspect-ratio: 3 / 4;
+  cursor: default;
+}
+
+.lightboxImage {
+  object-fit: contain;
+}
+
+.lightboxCaption {
+  text-align: center;
+  cursor: default;
+}
+
+.lightboxTitle {
+  max-width: 46ch;
+}
+
+.lightboxIssuer {
+  opacity: 0.75;
+  margin-top: var(--space-3xs);
+}
+
+.lightboxClose {
+  position: fixed;
+  top: var(--space-lg);
+  right: var(--space-lg);
+  background: none;
+  border: none;
+  color: var(--color-paper);
+  padding: var(--space-2xs);
+  cursor: pointer;
+  opacity: 0.85;
+  transition: opacity var(--duration-fast) var(--ease-out-soft);
+}
+
+.lightboxClose:hover,
+.lightboxClose:focus-visible {
+  opacity: 1;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 640px) {
+  .tileWrap {
+    width: 128px;
+  }
+
+  .tileSpotlightWrap {
+    width: 176px;
+  }
+
+  .wall {
+    gap: var(--space-md) var(--space-sm);
+  }
+}
