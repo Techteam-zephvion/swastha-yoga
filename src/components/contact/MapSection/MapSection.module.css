@@ -3,21 +3,15 @@
   width: 100%;
   aspect-ratio: 16 / 6;
   border-radius: var(--radius-lg);
+  overflow: hidden;
   background-color: var(--color-ivory);
   border: 1px solid rgba(58, 54, 47, 0.14);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: var(--space-xs);
 }
 
-.icon {
-  color: var(--color-dusty-gold);
-}
-
-.caption {
-  letter-spacing: var(--tracking-nav);
+.iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
 @media (max-width: 640px) {
