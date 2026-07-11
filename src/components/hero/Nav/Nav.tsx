@@ -2,6 +2,7 @@
 
 import { forwardRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { getLayerStyle } from "@/lib/layers";
 import { NAV_ROUTES } from "@/lib/routes";
 import styles from "./Nav.module.css";
@@ -16,7 +17,10 @@ import styles from "./Nav.module.css";
 export const Nav = forwardRef<HTMLElement, object>(function Nav(_props, ref) {
   return (
     <nav ref={ref} style={getLayerStyle("nav")} className={styles.root} aria-label="Primary">
-      <span className={styles.mark}>Swastha Yoga</span>
+      <span className={styles.mark}>
+        <Image src="/brand/icon.webp" alt="" width={37} height={45} className={styles.markIcon} />
+        <span>Swastha Yoga</span>
+      </span>
       <ul className={styles.links}>
         {NAV_ROUTES.map((route) => (
           <li key={route.href}>

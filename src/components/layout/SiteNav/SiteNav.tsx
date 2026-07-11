@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import clsx from "clsx";
@@ -49,7 +50,15 @@ export function SiteNav() {
     <>
       <nav className={styles.root} data-scrolled={scrolled || undefined} aria-label="Primary">
         <Link href="/" className={styles.mark}>
-          Swastha Yoga
+          <Image
+            src="/brand/icon.webp"
+            alt=""
+            width={37}
+            height={45}
+            priority
+            className={styles.markIcon}
+          />
+          <span>Swastha Yoga</span>
         </Link>
 
         <ul className={styles.links}>
@@ -95,7 +104,10 @@ export function SiteNav() {
         aria-hidden={!drawerOpen}
       >
         <div className={styles.drawerHeader}>
-          <span className={styles.mark}>Swastha Yoga</span>
+          <span className={styles.mark}>
+            <Image src="/brand/icon.webp" alt="" width={37} height={45} className={styles.markIcon} />
+            <span>Swastha Yoga</span>
+          </span>
           <button
             type="button"
             className={styles.menuButton}

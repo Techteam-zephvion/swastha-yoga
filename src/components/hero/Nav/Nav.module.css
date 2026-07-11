@@ -55,6 +55,9 @@
 }
 
 .mark {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2xs);
   font-family: var(--font-display);
   font-size: var(--text-nav-mark);
   font-weight: 500;
@@ -62,6 +65,12 @@
   color: #fff;
   opacity: 0.9;
   white-space: nowrap;
+}
+
+.markIcon {
+  height: 34px;
+  width: auto;
+  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.35));
 }
 
 .links {
