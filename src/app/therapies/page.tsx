@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/layout/PageHero/PageHero";
 import { TherapyCategories } from "@/components/therapies/TherapyCategories/TherapyCategories";
+import { ClassTimings } from "@/components/therapies/ClassTimings/ClassTimings";
 import { TreatmentProcess } from "@/components/therapies/TreatmentProcess/TreatmentProcess";
 import { ConditionsGrid } from "@/components/therapies/ConditionsGrid/ConditionsGrid";
 import { ClosingCTA } from "@/components/ui/ClosingCTA/ClosingCTA";
@@ -22,6 +23,7 @@ export default function TherapiesPage() {
         breadcrumbItems={[{ label: "Home", href: "/" }, { label: "Therapies" }]}
       />
       <TherapyCategories />
+      <ClassTimings />
       <TreatmentProcess />
       <ConditionsGrid />
       <ClosingCTA
