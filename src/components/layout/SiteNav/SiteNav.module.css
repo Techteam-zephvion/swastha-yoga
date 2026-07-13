@@ -32,6 +32,17 @@
   background: linear-gradient(to bottom, rgba(30, 28, 24, 0.5), rgba(30, 28, 24, 0));
   pointer-events: none;
   z-index: 0;
+  opacity: 1;
+  transition: opacity var(--duration-fast) var(--ease-out-soft);
+}
+
+/* Once scrolled, the nav has its own glass background for contrast —
+   this scrim's only job was legibility over the hero at the very top,
+   and left unconditional it keeps darkening whatever page content (often
+   plain-background body copy) happens to scroll up underneath the fixed
+   nav, which can read as low-contrast text sitting in a dark smudge. */
+.root[data-scrolled]::before {
+  opacity: 0;
 }
 
 .mark,

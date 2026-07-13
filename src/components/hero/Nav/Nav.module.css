@@ -33,6 +33,15 @@
   background: linear-gradient(to bottom, rgba(30, 28, 24, 0.5), rgba(30, 28, 24, 0));
   pointer-events: none;
   z-index: 0;
+  opacity: 1;
+  transition: opacity var(--duration-fast) var(--ease-out-soft);
+}
+
+/* See SiteNav.module.css — once scrolled, the nav's own glass background
+   handles contrast, and this scrim otherwise keeps darkening whatever
+   page content scrolls up underneath the fixed nav. */
+.root[data-scrolled="true"]::before {
+  opacity: 0;
 }
 
 .mark,
