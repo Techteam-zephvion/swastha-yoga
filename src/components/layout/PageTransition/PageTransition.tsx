@@ -4,6 +4,7 @@ import { useEffect, useRef, type ReactNode } from "react";
 import { usePathname } from "next/navigation";
 import { gsap } from "@/lib/gsap";
 import { useSceneStore } from "@/lib/store";
+import { scrollToTop } from "@/hooks/useLenis";
 
 /**
  * Wraps every route's content in the root layout. The App Router keeps
@@ -27,6 +28,8 @@ export function PageTransition({ children }: { children: ReactNode }) {
       isFirstRender.current = false;
       return;
     }
+
+    scrollToTop();
 
     const el = containerRef.current;
     if (!el || reducedMotion) return;

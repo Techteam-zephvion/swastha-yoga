@@ -53,7 +53,7 @@ export function SiteNav() {
           <Image
             src="/brand/icon.webp"
             alt=""
-            width={37}
+            width={38}
             height={45}
             priority
             className={styles.markIcon}
@@ -105,7 +105,7 @@ export function SiteNav() {
       >
         <div className={styles.drawerHeader}>
           <span className={styles.mark}>
-            <Image src="/brand/icon.webp" alt="" width={37} height={45} className={styles.markIcon} />
+            <Image src="/brand/icon.webp" alt="" width={38} height={45} className={styles.markIcon} />
             <span>Swastha Yoga</span>
           </span>
           <button

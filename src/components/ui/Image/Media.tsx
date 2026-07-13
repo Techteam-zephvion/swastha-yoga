@@ -43,6 +43,7 @@ export function Media({
         styles[`ratio-${ratio}`],
         wrapperClassName,
       )}
+      style={reveal ? { willChange: "opacity" } : undefined}
     >
       <NextImage alt={alt} className={clsx(styles.image, className)} {...imageProps} />
     </div>

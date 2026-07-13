@@ -142,7 +142,11 @@ export function LearningJourney() {
                     className={cert.spotlight ? styles.tileSpotlightWrap : styles.tileWrap}
                     style={{ transform: `rotate(${tilt}deg) translateY(${lift}px)` }}
                   >
-                    <Reveal variant="scale-in" delay={chapterIndex * 0.1 + (i % 3) * 0.06}>
+                    <Reveal
+                      variant="scale-in"
+                      delay={chapterIndex * 0.1 + (i % 3) * 0.06}
+                      className={styles.tileReveal}
+                    >
                       <button
                         type="button"
                         className={styles.tile}

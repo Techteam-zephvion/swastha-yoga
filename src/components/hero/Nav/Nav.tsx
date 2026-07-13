@@ -18,7 +18,7 @@ export const Nav = forwardRef<HTMLElement, object>(function Nav(_props, ref) {
   return (
     <nav ref={ref} style={getLayerStyle("nav")} className={styles.root} aria-label="Primary">
       <span className={styles.mark}>
-        <Image src="/brand/icon.webp" alt="" width={37} height={45} className={styles.markIcon} />
+        <Image src="/brand/icon.webp" alt="" width={38} height={45} className={styles.markIcon} />
         <span>Swastha Yoga</span>
       </span>
       <ul className={styles.links}>
