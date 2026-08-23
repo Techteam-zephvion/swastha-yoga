@@ -13,7 +13,7 @@ import { ClosingCTA } from "@/components/ui/ClosingCTA/ClosingCTA";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "The story behind Swastha Yoga — founder Gandharva Natesh's journey into yoga therapy, the guru who shaped it, and a decade of practice that led here.",
+    "The story behind Swastha Yoga — founded by Dr. Sumitra M Patil, shaped by Gandharva's own journey into yoga therapy under her guidance, and a decade of practice that led here.",
   alternates: { canonical: "/about" },
 };
 

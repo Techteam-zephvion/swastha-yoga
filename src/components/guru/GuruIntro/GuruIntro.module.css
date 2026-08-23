@@ -10,11 +10,8 @@
 }
 
 .portraitFrame {
-  max-height: 560px;
-}
-
-.portrait {
-  object-position: center top;
+  max-width: 420px;
+  margin-inline: auto;
 }
 
 .copy {
@@ -50,6 +47,6 @@
   }
 
   .portraitFrame {
-    max-height: 480px;
+    max-width: 360px;
   }
 }

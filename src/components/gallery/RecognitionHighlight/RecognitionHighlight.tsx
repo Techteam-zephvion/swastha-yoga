@@ -22,7 +22,7 @@ export function RecognitionHighlight() {
           src="/guru/guru-trophy-presentation.webp"
           alt="An award presentation at the 15th South Indian Yogasana Championship, December 2017"
           fill
-          ratio="wide"
+          ratio="landscape"
           radius="none"
           reveal={false}
           sizes="(max-width: 860px) 92vw, 900px"
@@ -33,10 +33,10 @@ export function RecognitionHighlight() {
       <div className={styles.certificateRow}>
         <Reveal variant="scale-in" delay={0.2} className={styles.certificateWrap}>
           <Media
-            src="/certificates/global-yoga-praveena-award-2017-18.webp"
-            alt="Global Yoga Praveena Award certificate, 2017–18"
+            src="/guru/guru-certificate-portrait.webp"
+            alt="Dr. Sumitra M Patil holding her certificate from the 15th South Indian Yogasana Championship, December 2017"
             fill
-            ratio="landscape"
+            ratio="portrait"
             radius="none"
             reveal={false}
             sizes="(max-width: 640px) 70vw, 320px"
@@ -45,7 +45,8 @@ export function RecognitionHighlight() {
         </Reveal>
         <Reveal delay={0.3} className={styles.caption}>
           <Text as="p" size="md" color="muted">
-            The Global Yoga Praveena Award, 2017–18 — one certificate among
+            Dr. Sumitra M Patil&rsquo;s certificate from the 15th South Indian
+            Yogasana Championship, December 2017 — one recognition among
             several, kept here not as proof, but as a marker of how long this
             practice has been taken seriously.
           </Text>

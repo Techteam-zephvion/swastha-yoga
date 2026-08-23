@@ -8,7 +8,7 @@ import styles from "./ClinicInfo.module.css";
 const DETAILS = [
   {
     label: "Address",
-    value: "Swastha Yoga Therapy & Prenatal Centre, Girinagar, Bengaluru",
+    value: "Swastha Yoga Therapy and Prenatal Center, Girinagar, Bengaluru",
   },
   {
     label: "Opening Hours",

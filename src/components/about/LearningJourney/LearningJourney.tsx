@@ -15,9 +15,9 @@ interface Certificate {
   issuer: string;
   year: string;
   src: string;
-  /** The one certificate that gets a slightly larger, spotlighted
-   *  thumbnail rather than sitting flush with its siblings. */
-  spotlight?: boolean;
+  /** Matches the certificate's real orientation so the grid tile shows
+   *  the document intact rather than an arbitrary crop. */
+  ratio: "portrait" | "landscape";
 }
 
 interface Chapter {
@@ -28,8 +28,9 @@ interface Chapter {
 /** The same seven certificates as before (VELS M.Sc., NITHYA Teacher
  *  Training, Skill India, KSD merit certificate, NITHYA Award of
  *  Excellence, Vishwa Samskruti Utsava Dubai, Global Yoga Praveena
- *  Award), now shown as the documents themselves rather than described
- *  in a text row — a collected archive, not a résumé line. */
+ *  Award), shown as a legible grid — full, readable documents rather
+ *  than tilted, cropped thumbnails — with a click-to-enlarge lightbox
+ *  for a closer look. */
 const CHAPTERS: Chapter[] = [
   {
     label: "Education",
@@ -39,6 +40,7 @@ const CHAPTERS: Chapter[] = [
         issuer: "VELS Institute",
         year: "2023",
         src: "/certificates/vels-msc-yoga-degree.webp",
+        ratio: "portrait",
       },
     ],
   },
@@ -50,18 +52,21 @@ const CHAPTERS: Chapter[] = [
         issuer: "NITHYA Association",
         year: "Ongoing",
         src: "/certificates/nithya-teacher-training-certificate.webp",
+        ratio: "landscape",
       },
       {
         title: "Certified Yoga Trainer",
         issuer: "Ministry of AYUSH, Skill India",
         year: "Ongoing",
         src: "/certificates/skill-india-yoga-trainer-certificate.webp",
+        ratio: "landscape",
       },
       {
         title: "Yoga Merit Certificate — Advance II, 97%",
         issuer: "Karnataka Social Development Society",
         year: "2019",
         src: "/certificates/ksd-society-merit-certificate.webp",
+        ratio: "landscape",
       },
     ],
   },
@@ -73,29 +78,25 @@ const CHAPTERS: Chapter[] = [
         issuer: "Amrutha Yoga Kendra",
         year: "2017–18",
         src: "/certificates/global-yoga-praveena-award-2017-18.webp",
-        spotlight: true,
+        ratio: "portrait",
       },
       {
         title: "Certificate of Appreciation",
         issuer: "Vishwa Samskruti Utsava, Dubai",
         year: "2019",
         src: "/certificates/vishwa-samskruti-utsava-dubai-certificate.webp",
+        ratio: "landscape",
       },
       {
         title: "Award of Excellence",
         issuer: "NITHYA Association",
         year: "Ongoing",
         src: "/certificates/nithya-award-of-excellence.webp",
+        ratio: "landscape",
       },
     ],
   },
 ];
-
-/** Fixed, hand-picked rotation/offset values per position — deterministic
- *  (not Math.random()) so server and client render identically, but
- *  varied enough that the wall doesn't look grid-aligned. */
-const TILT = [-3, 2, -2, 3, -1.5, 2.5, 1.5];
-const LIFT = [0, 14, -8, 6, -12, 4, -6];
 
 export function LearningJourney() {
   const [open, setOpen] = useState<Certificate | null>(null);
@@ -109,16 +110,15 @@ export function LearningJourney() {
     return () => window.removeEventListener("keydown", onKeyDown);
   }, [open]);
 
-  let tileIndex = 0;
-
   return (
     <Section width="default" spacing="lg" tone="ivory">
       <Reveal className={styles.header}>
         <Eyebrow>Learning Journey</Eyebrow>
         <Heading level={2}>A Decade, Collected</Heading>
         <Text size="lg" color="muted" className={styles.intro}>
-          Not a résumé — a wall. Every certificate here was earned over
-          years, not printed for a website.
+          Gandharva&rsquo;s own credentials, not a résumé — a collection.
+          Every certificate here was earned over years, not printed for a
+          website.
         </Text>
       </Reveal>
 
@@ -131,47 +131,37 @@ export function LearningJourney() {
               </Text>
             </Reveal>
 
-            <div className={styles.wall}>
-              {chapter.certificates.map((cert) => {
-                const i = tileIndex++;
-                const tilt = TILT[i % TILT.length];
-                const lift = LIFT[i % LIFT.length];
-                return (
-                  <div
-                    key={cert.title}
-                    className={cert.spotlight ? styles.tileSpotlightWrap : styles.tileWrap}
-                    style={{ transform: `rotate(${tilt}deg) translateY(${lift}px)` }}
+            <div className={styles.grid}>
+              {chapter.certificates.map((cert, i) => (
+                <Reveal
+                  key={cert.title}
+                  variant="fade-up"
+                  delay={chapterIndex * 0.1 + i * 0.06}
+                  className={styles.card}
+                >
+                  <button
+                    type="button"
+                    className={styles.tile}
+                    data-ratio={cert.ratio}
+                    onClick={() => setOpen(cert)}
+                    aria-label={`View certificate: ${cert.title}, ${cert.issuer}`}
                   >
-                    <Reveal
-                      variant="scale-in"
-                      delay={chapterIndex * 0.1 + (i % 3) * 0.06}
-                      className={styles.tileReveal}
-                    >
-                      <button
-                        type="button"
-                        className={styles.tile}
-                        onClick={() => setOpen(cert)}
-                        aria-label={`View certificate: ${cert.title}, ${cert.issuer}`}
-                      >
-                        <Image
-                          src={cert.src}
-                          alt={`${cert.title} — ${cert.issuer}`}
-                          fill
-                          sizes={
-                            cert.spotlight
-                              ? "(max-width: 640px) 60vw, 260px"
-                              : "(max-width: 640px) 42vw, 180px"
-                          }
-                          className={styles.tileImage}
-                        />
-                      </button>
-                      <Text as="span" size="sm" color="muted" className={styles.tileCaption}>
-                        {cert.year}
-                      </Text>
-                    </Reveal>
-                  </div>
-                );
-              })}
+                    <Image
+                      src={cert.src}
+                      alt={`${cert.title} — ${cert.issuer}`}
+                      fill
+                      sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 280px"
+                      className={styles.tileImage}
+                    />
+                  </button>
+                  <Text as="p" size="sm" className={styles.cardTitle}>
+                    {cert.title}
+                  </Text>
+                  <Text as="span" size="sm" color="muted" className={styles.cardMeta}>
+                    {cert.issuer} · {cert.year}
+                  </Text>
+                </Reveal>
+              ))}
             </div>
           </div>
         ))}

@@ -15,7 +15,7 @@ export function GuruTeaser() {
       <Reveal variant="fade-in" className={styles.portraitWrap}>
         <Media
           src="/guru/guru-portrait.webp"
-          alt="Gandharva's guru"
+          alt="Dr. Sumitra M Patil, founder of Swastha Yoga"
           fill
           ratio="portrait"
           radius="lg"
@@ -32,8 +32,9 @@ export function GuruTeaser() {
           beside you until it becomes your own.&rdquo;
         </Text>
         <Text size="md" color="muted" className={styles.text}>
-          Gandharva&rsquo;s own practice was shaped under his guru&rsquo;s
-          guidance, long before there was a studio to teach in.
+          Gandharva&rsquo;s own practice was shaped under the guidance of Dr.
+          Sumitra M Patil, founder of Swastha Yoga, long before there was a
+          studio to teach in.
         </Text>
         <Button href="/guru" variant="ghost" className={styles.link}>
           Meet the Guru

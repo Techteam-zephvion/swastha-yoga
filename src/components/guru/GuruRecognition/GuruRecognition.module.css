@@ -23,11 +23,12 @@
 }
 
 .trophyFrame {
-  max-height: 480px;
+  max-width: 640px;
 }
 
 .certificateFrame {
-  max-height: 480px;
+  max-width: 360px;
+  margin-inline: auto;
 }
 
 @media (max-width: 860px) {
@@ -36,8 +37,11 @@
     gap: var(--space-lg);
   }
 
-  .trophyFrame,
+  .trophyFrame {
+    max-width: 560px;
+  }
+
   .certificateFrame {
-    max-height: 420px;
+    max-width: 315px;
   }
 }

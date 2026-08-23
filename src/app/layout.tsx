@@ -24,7 +24,7 @@ const displaySerif = Cormorant_Garamond({
 
 const DEFAULT_TITLE = "Swastha Yoga — Therapy & Prenatal Care";
 const DEFAULT_DESCRIPTION =
-  "Swastha Yoga Therapy & Prenatal Centre in Girinagar, Bengaluru — personalized yoga therapy, prenatal care, and stress and mobility support.";
+  "Swastha Yoga Therapy and Prenatal Center in Girinagar, Bengaluru — personalized yoga therapy, prenatal care, and stress and mobility support.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -57,16 +57,21 @@ export const metadata: Metadata = {
 const localBusinessJsonLd = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  name: "Swastha Yoga Therapy & Prenatal Centre",
+  name: "Swastha Yoga Therapy and Prenatal Center",
   image: `${SITE_URL}/hero/background.webp`,
   url: SITE_URL,
-  telephone: "+91-72048-88573",
+  telephone: "+917204888573",
   address: {
     "@type": "PostalAddress",
     streetAddress: "Girinagar",
     addressLocality: "Bengaluru",
     addressRegion: "Karnataka",
     addressCountry: "IN",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 12.940169815564843,
+    longitude: 77.54526927593113,
   },
   openingHoursSpecification: {
     "@type": "OpeningHoursSpecification",

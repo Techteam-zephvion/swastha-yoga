@@ -42,7 +42,7 @@ const BEATS: Beat[] = [
     year: "2022",
     title: "Founded Swastha Yoga",
     description:
-      "The practice became a place — Swastha Yoga Therapy & Prenatal Centre opened its doors in Bengaluru.",
+      "The practice became a place — Dr. Sumitra M Patil founded Swastha Yoga Therapy and Prenatal Center, opening its doors in Bengaluru and taking Gandharva on as a student under her direct teaching.",
   },
   {
     kind: "photo",
@@ -56,7 +56,7 @@ const BEATS: Beat[] = [
     year: "Today",
     title: "A Practice for Others",
     description:
-      "More than 1,000 students across five countries later, the question hasn't changed: what does this body need, right now.",
+      "Dr. Sumitra has since stepped back, and Gandharva now leads Swastha Yoga. More than 1,000 students across five countries later, the question hasn't changed: what does this body need, right now.",
   },
   {
     kind: "photo",
@@ -77,14 +77,14 @@ const BEATS: Beat[] = [
     src: "/about/journey/founder-toehold-fold.webp",
     alt: "Gandharva in a wide-legged toe-hold forward fold against a brick wall",
     caption: "The mat changes size. The discipline doesn't.",
-    ratio: "portrait",
+    ratio: "landscape",
   },
   {
     kind: "photo",
     src: "/about/journey/founder-triangle-profile.webp",
     alt: "Gandharva in profile holding a side-angle triangle pose against a brick wall",
     caption: "Still practicing the shapes no one is watching him practice.",
-    ratio: "portrait",
+    ratio: "landscape",
   },
 ];
 

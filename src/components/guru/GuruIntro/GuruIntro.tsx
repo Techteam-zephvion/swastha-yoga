@@ -16,14 +16,13 @@ export function GuruIntro() {
         <Reveal variant="fade-in" className={styles.portraitWrap}>
           <Media
             src="/guru/guru-portrait.webp"
-            alt="Gandharva's guru at a Vidyashilp School yoga event"
+            alt="Dr. Sumitra M Patil at a Vidyashilp School yoga event"
             fill
             ratio="portrait"
             radius="lg"
             reveal={false}
             sizes="(max-width: 860px) 90vw, 40vw"
             wrapperClassName={styles.portraitFrame}
-            className={styles.portrait}
           />
         </Reveal>
 
@@ -31,17 +30,18 @@ export function GuruIntro() {
           <Reveal delay={0.05}>
             <Eyebrow>Teaching Lineage</Eyebrow>
             <Heading level={2} className={styles.heading}>
-              Meet the Guru
+              Meet Dr. Sumitra M Patil
             </Heading>
           </Reveal>
 
           <Reveal delay={0.15}>
             <Text size="lg" className={styles.paragraph}>
-              Gandharva&rsquo;s own practice was shaped under the guidance of
-              his guru — a teacher who introduced him not just to postures,
-              but to yoga as a complete discipline of body, breath, and
-              attention, passed down through direct, personal instruction
-              rather than a fixed curriculum.
+              Dr. Sumitra M Patil founded Swastha Yoga and, for years, led it
+              in person — the guru whose guidance shaped Gandharva&rsquo;s own
+              practice, introducing him not just to postures, but to yoga as
+              a complete discipline of body, breath, and attention, passed
+              down through direct, personal instruction rather than a fixed
+              curriculum.
             </Text>
           </Reveal>
 
@@ -57,10 +57,12 @@ export function GuruIntro() {
 
           <Reveal delay={0.35}>
             <Text size="lg" className={styles.paragraph}>
-              That same relationship shapes how Swastha Yoga teaches today —
-              every student met individually, every correction given by
-              hand and by eye, not by template. The lineage continues in
-              the room, one session at a time.
+              Dr. Sumitra has since stepped back from day-to-day teaching, and
+              Gandharva — once her student — now leads Swastha Yoga. But that
+              same relationship still shapes how the studio teaches today:
+              every student met individually, every correction given by hand
+              and by eye, not by template. The lineage continues in the room,
+              one session at a time.
             </Text>
           </Reveal>
 

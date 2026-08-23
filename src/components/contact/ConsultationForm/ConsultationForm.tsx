@@ -23,14 +23,37 @@ const CONTACT_METHODS = ["Phone Call", "WhatsApp", "Email"];
 
 const TIMES = ["Morning", "Afternoon", "Evening", "Flexible"];
 
-/** The page's central action — a calm, single-column request form. No
- *  real submission endpoint exists yet, so on submit we simply confirm
- *  receipt in place rather than pretending to send anywhere. */
+/** No backend submission endpoint exists yet, so the request is handed
+ *  off as a pre-filled WhatsApp message to the studio's own number —
+ *  the same channel already used elsewhere on the site — rather than
+ *  being silently discarded. Swap for a real API route + email once a
+ *  confirmed inbox exists. */
+function buildWhatsAppMessage(data: FormData): string {
+  const lines = [
+    "New consultation request from the website:",
+    `Name: ${data.get("name")}`,
+    `Phone: ${data.get("phone")}`,
+    data.get("email") ? `Email: ${data.get("email")}` : null,
+    `Primary concern: ${data.get("concern")}`,
+    `Preferred contact method: ${data.get("contactMethod")}`,
+    `Preferred time: ${data.get("preferredTime")}`,
+    data.get("message") ? `Message: ${data.get("message")}` : null,
+  ];
+  return lines.filter(Boolean).join("\n");
+}
+
+/** The page's central action — a calm, single-column request form. */
 export function ConsultationForm() {
   const [submitted, setSubmitted] = useState(false);
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    const message = buildWhatsAppMessage(new FormData(event.currentTarget));
+    window.open(
+      `https://wa.me/917204888573?text=${encodeURIComponent(message)}`,
+      "_blank",
+      "noopener,noreferrer",
+    );
     setSubmitted(true);
   }
 
@@ -48,10 +71,10 @@ export function ConsultationForm() {
       {submitted ? (
         <Reveal className={styles.confirmation}>
           <CheckCircle2 size={32} strokeWidth={1.25} className={styles.confirmIcon} aria-hidden="true" />
-          <Heading level={3}>Request Received</Heading>
+          <Heading level={3}>Almost There</Heading>
           <Text color="muted" className={styles.confirmText}>
-            Thank you — we&rsquo;ll reach out at your preferred time to
-            confirm your consultation.
+            We&rsquo;ve opened WhatsApp with your details filled in — just
+            hit send and we&rsquo;ll confirm your consultation.
           </Text>
         </Reveal>
       ) : (

@@ -26,7 +26,7 @@ export function GuruRecognition() {
         <Reveal variant="fade-in" delay={0.1} className={styles.imageWrap}>
           <Media
             src="/guru/guru-trophy-presentation.webp"
-            alt="The guru receiving a trophy at the 15th South Indian Yogasana Championship, December 2017"
+            alt="Dr. Sumitra M Patil receiving a trophy at the 15th South Indian Yogasana Championship, December 2017"
             fill
             ratio="landscape"
             radius="lg"
@@ -38,7 +38,7 @@ export function GuruRecognition() {
         <Reveal variant="fade-in" delay={0.2} className={styles.imageWrap}>
           <Media
             src="/guru/guru-certificate-portrait.webp"
-            alt="The guru holding her championship certificate and trophy"
+            alt="Dr. Sumitra M Patil holding her championship certificate and trophy"
             fill
             ratio="portrait"
             radius="lg"

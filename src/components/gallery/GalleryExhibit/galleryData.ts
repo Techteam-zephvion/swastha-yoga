@@ -242,7 +242,7 @@ export const PHOTOS: GalleryPhoto[] = [
   {
     id: "guru-certificate",
     src: "/guru/guru-certificate-portrait.webp",
-    alt: "The guru holding her championship certificate and trophy",
+    alt: "Dr. Sumitra M Patil holding her championship certificate and trophy",
     caption: "Recognition that predates the studio by years.",
     category: "Recognition",
     ratio: "portrait",

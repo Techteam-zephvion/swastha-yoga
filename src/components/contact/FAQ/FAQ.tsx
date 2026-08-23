@@ -42,6 +42,22 @@ const QUESTIONS = [
   },
 ];
 
+// Static, code-authored structured data (mirrors the pattern in
+// src/app/layout.tsx) — safe to render as literal script text since the
+// content is fixed copy above, not user input.
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: QUESTIONS.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.answer,
+    },
+  })),
+};
+
 /** A plain, single-open accordion for consultation FAQs — CSS-driven
  *  expand/collapse (grid-template-rows) rather than a JS height
  *  animation, kept accessible with a real disclosure button. */
@@ -50,6 +66,7 @@ export function FAQ() {
 
   return (
     <Section width="narrow" spacing="lg" tone="ivory">
+      <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
       <Reveal className={styles.header}>
         <Eyebrow>Common Questions</Eyebrow>
         <Heading level={2}>Before You Book</Heading>

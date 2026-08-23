@@ -20,7 +20,6 @@
 .chapter {
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 .chapterLabel {
@@ -35,51 +34,22 @@
   opacity: 0.6;
 }
 
-.wall {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
-  gap: var(--space-lg) var(--space-md);
-  width: 100%;
-  padding: var(--space-lg) var(--space-sm);
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: var(--space-lg);
 }
 
-.tileWrap,
-.tileSpotlightWrap {
+.card {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: var(--space-2xs);
-}
-
-.tileWrap {
-  width: 168px;
-}
-
-.tileSpotlightWrap {
-  width: 240px;
-}
-
-/* The Reveal component renders a plain, unstyled div around the button +
-   caption. Inside a flex column with align-items: center, an unsized div
-   shrinks to fit-content instead of filling the tile's width — and since
-   .tile below sizes itself via width: 100%, that collapses to almost
-   nothing. Force it to take the full tile width so percentage sizing has
-   something definite to resolve against. */
-.tileReveal {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  gap: var(--space-2xs);
+  gap: var(--space-3xs);
 }
 
 .tile {
   position: relative;
   display: block;
   width: 100%;
-  aspect-ratio: 3 / 4;
   padding: 0;
   border: 1px solid rgba(58, 54, 47, 0.14);
   border-radius: var(--radius-md);
@@ -87,12 +57,23 @@
   background-color: var(--color-paper);
   box-shadow: var(--shadow-subtle);
   cursor: pointer;
-  transition: box-shadow var(--duration-fast) var(--ease-out-soft);
+  transition:
+    box-shadow var(--duration-fast) var(--ease-out-soft),
+    transform var(--duration-fast) var(--ease-out-soft);
+}
+
+.tile[data-ratio="portrait"] {
+  aspect-ratio: 3 / 4;
+}
+
+.tile[data-ratio="landscape"] {
+  aspect-ratio: 4 / 3;
 }
 
 .tile:hover,
 .tile:focus-visible {
   box-shadow: var(--shadow-elevated);
+  transform: translateY(-2px);
   outline: none;
 }
 
@@ -103,11 +84,16 @@
 }
 
 .tileImage {
-  object-fit: cover;
+  object-fit: contain;
 }
 
-.tileCaption {
-  letter-spacing: 0.04em;
+.cardTitle {
+  margin-top: var(--space-2xs);
+  font-weight: 500;
+}
+
+.cardMeta {
+  letter-spacing: 0.02em;
 }
 
 .lightbox {
@@ -179,15 +165,8 @@
 }
 
 @media (max-width: 640px) {
-  .tileWrap {
-    width: 128px;
-  }
-
-  .tileSpotlightWrap {
-    width: 176px;
-  }
-
-  .wall {
-    gap: var(--space-md) var(--space-sm);
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: var(--space-md);
   }
 }

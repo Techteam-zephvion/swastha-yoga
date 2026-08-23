@@ -54,7 +54,7 @@ export function GalleryPreview() {
             src="/gallery/community-group-meditation.webp"
             alt="Students seated together in group meditation"
             fill
-            ratio="square"
+            ratio="landscape"
             radius="lg"
             reveal={false}
             sizes="(max-width: 860px) 50vw, 24vw"

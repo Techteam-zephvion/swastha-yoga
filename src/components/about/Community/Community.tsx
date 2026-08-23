@@ -48,7 +48,7 @@ export function Community() {
             src="/about/journey/today-class.webp"
             alt="Students practicing together at the studio"
             fill
-            ratio="square"
+            ratio="landscape"
             radius="lg"
             reveal={false}
             sizes="(max-width: 860px) 50vw, 24vw"
