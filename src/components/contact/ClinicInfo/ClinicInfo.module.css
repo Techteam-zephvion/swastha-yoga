@@ -27,6 +27,7 @@
 
 .term {
   font-family: var(--font-body);
+  font-weight: 600;
   font-size: 0.8rem;
   letter-spacing: var(--tracking-nav);
   text-transform: uppercase;

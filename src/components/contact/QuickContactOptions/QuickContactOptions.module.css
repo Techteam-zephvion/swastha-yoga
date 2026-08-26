@@ -24,6 +24,7 @@
 }
 
 .label {
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: var(--tracking-nav);
   font-size: 0.75rem;

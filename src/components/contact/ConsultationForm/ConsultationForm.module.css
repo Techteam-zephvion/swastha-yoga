@@ -30,6 +30,7 @@
 
 .label {
   font-family: var(--font-body);
+  font-weight: 600;
   font-size: 0.75rem;
   letter-spacing: var(--tracking-nav);
   text-transform: uppercase;
@@ -45,6 +46,7 @@
 
 .input {
   font-family: var(--font-body);
+  font-weight: 500;
   font-size: var(--text-body-md);
   color: var(--color-ink);
   background-color: var(--color-paper);
