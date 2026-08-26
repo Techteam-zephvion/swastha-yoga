@@ -31,8 +31,12 @@
   opacity: 0.6;
 }
 
-.value {
+.link .value {
   margin: 0;
+  font-family: var(--font-manrope), var(--font-body);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  font-variant-numeric: tabular-nums;
   transition: opacity var(--duration-fast) var(--ease-out-soft);
 }
 
