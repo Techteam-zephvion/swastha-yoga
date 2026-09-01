@@ -13,9 +13,8 @@ const FLAP_DELAYS = [0, -0.15, -0.3];
 /** Independent birds — each one flies its own heading, height, speed,
  *  and timing (`birdTimeline`), so all 3 are typically airborne at
  *  once, on different paths, rather than one rigid group. Every bird
- *  is a single 10-frame flap-cycle sprite
- *  (illustrated, traced from the client's own reference artwork),
- *  stepped by a self-contained CSS animation; this component only
+ *  is a single 12-frame flap-cycle sprite (client-supplied reference
+ *  artwork), stepped by a self-contained CSS animation; this component only
  *  renders the static marks and forwards its ref. */
 export const Birds = forwardRef<HTMLDivElement, object>(function Birds(_props, ref) {
   return (
