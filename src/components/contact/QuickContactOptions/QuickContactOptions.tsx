@@ -23,9 +23,9 @@ const OPTIONS = [
   {
     icon: Mail,
     label: "Email",
-    value: "hello@swasthayoga.in",
+    value: "Swasthayoga@gmail.com",
     detail: "For longer notes or first-time enquiries.",
-    href: "mailto:hello@swasthayoga.in",
+    href: "mailto:Swasthayoga@gmail.com",
   },
   {
     icon: MapPin,
