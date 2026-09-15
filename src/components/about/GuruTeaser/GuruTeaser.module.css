@@ -5,13 +5,36 @@
   align-items: center;
 }
 
-.portraitWrap {
-  width: 200px;
+.portraitsGrid {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: var(--space-xl);
+  width: 100%;
+  max-width: 520px;
   margin-inline: auto;
 }
 
+.portraitItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xs);
+  flex: 1;
+  max-width: 220px;
+}
+
 .portraitFrame {
-  max-height: 260px;
+  width: 100%;
+  max-height: 280px;
+  box-shadow: 0 10px 30px -6px rgba(0, 0, 0, 0.08);
+}
+
+.caption {
+  font-size: var(--text-xs);
+  letter-spacing: 0.02em;
+  text-align: center;
+  margin-top: var(--space-2xs);
 }
 
 .copy {
@@ -32,7 +55,7 @@
 }
 
 .text {
-  max-width: 46ch;
+  max-width: 48ch;
 }
 
 .link {
@@ -44,11 +67,17 @@
     padding-block: var(--space-2xl);
   }
 
-  .portraitWrap {
-    width: 140px;
+  .portraitsGrid {
+    gap: var(--space-md);
+    max-width: 340px;
+  }
+
+  .portraitItem {
+    max-width: 160px;
   }
 
   .portraitFrame {
-    max-height: 180px;
+    max-height: 200px;
   }
 }
+

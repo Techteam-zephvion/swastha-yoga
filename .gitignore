@@ -47,3 +47,6 @@ __pycache__/
 tools/output/assets/*
 !tools/output/assets/.gitkeep
 .agents/
+.claude/*
+ChatGPT Image Sep 1, 2026, 08_42_54 PM.png
+skills-lock.json

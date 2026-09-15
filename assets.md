@@ -217,6 +217,14 @@ Derived crops/cutouts of the Bali gate photo, generated for use as hero/parallax
 | bali-gate-door-left.png | 1172x4166 | PNG | 1.5M | Left half of the transparent cutout — left gate spire + reflection, for use as a sliding door/curtain panel |
 | bali-gate-door-right.png | 1172x4166 | PNG | 1.6M | Right half of the transparent cutout — right gate spire + figure + reflection, for use as a sliding door/curtain panel |
 
+## public/guru/ (featured homepage & lineage portraits)
+
+| File | Dimensions | Format | Description |
+|---|---|---|---|
+| gandharva-portrait.webp | 420x560 | WEBP | Solo portrait of Gandharva Natesh (Lead Master & Therapist), cropped and retouched for the homepage welcome section |
+| gandharva-and-guru.webp | 1200x1600 | WEBP | Gandharva Natesh seated with his Guru Dr. Sumitra M Patil at Swastha Yoga, featured in the Teaching Lineage section |
+
 ---
 
-**Totals:** 130 image files — 58 in `design-assets/` (brand + flowers + leaves + wood), 72 in `manjunath_poojari_whatsapp/images/`.
+**Totals:** 132 image files — 58 in `design-assets/` (brand + flowers + leaves + wood), 72 in `manjunath_poojari_whatsapp/images/`, plus derived public webp assets.
+
