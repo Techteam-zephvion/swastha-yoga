@@ -16,7 +16,7 @@ export function WelcomeIntro() {
         <Reveal variant="fade-in" className={styles.portraitColumn}>
           <Media
             src="/guru/gandharva-forest-pose.webp"
-            alt="Gandharva Natesh performing an advanced yoga asana in nature, Lead Master & Yoga Therapist at Swastha Yoga"
+            alt="Master Gandharva Natesh performing an advanced yoga asana in nature, Lead Yoga Therapist at Swastha Yoga"
             fill
             ratio="portrait"
             radius="lg"
@@ -25,7 +25,7 @@ export function WelcomeIntro() {
             wrapperClassName={styles.portraitFrame}
           />
           <Text size="sm" color="muted" className={styles.portraitCaption}>
-            Gandharva Natesh · Lead Master &amp; Yoga Therapist
+            Master Gandharva Natesh · Lead Yoga Therapist
           </Text>
         </Reveal>
 
@@ -42,10 +42,10 @@ export function WelcomeIntro() {
             question at the center of it: what does this person need today?
           </Text>
           <Text size="md" color="muted" className={styles.subparagraph}>
-            Led by Gandharva Natesh — PhD Scholar, MSc Yoga, Certified Yoga
-            Therapist, and Energy Healer — our practice blends classical Hatha
-            yoga, prenatal care, and therapeutic healing tailored specifically
-            to your journey.
+            Led by Master Gandharva Natesh — PhD Scholar, MSc Yoga, Certified
+            Yoga Therapist, and Energy Healer — our practice blends classical
+            Hatha yoga, prenatal care, and therapeutic healing tailored
+            specifically to your journey.
           </Text>
           <div className={styles.actions}>
             <Button href="/about" variant="ghost" className={styles.link}>
