@@ -5,12 +5,36 @@
   align-items: center;
 }
 
+.portraitWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xs);
+  width: 100%;
+  max-width: 240px;
+  margin-inline: auto;
+}
+
+.portraitFrame {
+  width: 100%;
+  max-height: 320px;
+  box-shadow: 0 10px 30px -6px rgba(0, 0, 0, 0.08);
+}
+
+.caption {
+  font-size: var(--text-xs);
+  letter-spacing: 0.02em;
+  text-align: center;
+  margin-top: var(--space-2xs);
+}
+
 .copy {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: var(--space-md);
   text-align: center;
+  margin-top: var(--space-xl);
 }
 
 .quote {
@@ -32,6 +56,14 @@
 @media (max-width: 640px) {
   .section {
     padding-block: var(--space-2xl);
+  }
+
+  .portraitWrap {
+    max-width: 180px;
+  }
+
+  .portraitFrame {
+    max-height: 240px;
   }
 }
 

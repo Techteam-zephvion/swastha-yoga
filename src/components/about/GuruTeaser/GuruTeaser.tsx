@@ -1,16 +1,33 @@
 import { Eyebrow } from "@/components/ui/Typography/Eyebrow";
 import { Text } from "@/components/ui/Typography/Text";
+import { Media } from "@/components/ui/Image/Media";
 import { Button } from "@/components/ui/Button/Button";
 import { Section } from "@/components/ui/Section/Section";
 import { Reveal } from "@/components/ui/Reveal/Reveal";
 import styles from "./GuruTeaser.module.css";
 
-/** A quiet threshold moment highlighting the teaching lineage leading
- *  into the full /guru page. */
+/** A quiet threshold moment highlighting the teaching lineage — Gandharva
+ *  with his Guru Dr. Sumitra M Patil, leading into the full /guru page. */
 export function GuruTeaser() {
   return (
     <Section width="narrow" spacing="lg" tone="paper" className={styles.section}>
-      <Reveal delay={0.1} className={styles.copy}>
+      <Reveal variant="fade-in" className={styles.portraitWrap}>
+        <Media
+          src="/guru/gandharva-and-guru.webp"
+          alt="Gandharva Natesh with his Guru, Dr. Sumitra M Patil, at Swastha Yoga"
+          fill
+          ratio="portrait"
+          radius="lg"
+          reveal={false}
+          sizes="(max-width: 640px) 70vw, 280px"
+          wrapperClassName={styles.portraitFrame}
+        />
+        <Text size="sm" color="muted" className={styles.caption}>
+          Gandharva with Guru Dr. Sumitra
+        </Text>
+      </Reveal>
+
+      <Reveal delay={0.15} className={styles.copy}>
         <Eyebrow>Teaching Lineage</Eyebrow>
         <Text as="p" size="lg" className={styles.quote}>
           &ldquo;A teacher doesn&rsquo;t hand you the practice — they walk
