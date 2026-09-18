@@ -221,10 +221,18 @@ Derived crops/cutouts of the Bali gate photo, generated for use as hero/parallax
 
 | File | Dimensions | Format | Description |
 |---|---|---|---|
-| gandharva-portrait.webp | 420x560 | WEBP | Solo portrait of Gandharva Natesh (Lead Master & Therapist), cropped and retouched for the homepage welcome section |
-| gandharva-and-guru.webp | 1200x1600 | WEBP | Gandharva Natesh seated with his Guru Dr. Sumitra M Patil at Swastha Yoga, featured in the Teaching Lineage section |
+| gandharva-forest-pose.webp | 768x1024 | WEBP | Gandharva Natesh performing an advanced yoga forearm stand in nature, featured in the homepage welcome section |
+| gandharva-portrait.webp | 420x560 | WEBP | Solo portrait of Gandharva Natesh (Lead Master & Therapist) |
+| gandharva-and-guru.webp | 1200x1600 | WEBP | Gandharva Natesh seated with his Guru Dr. Sumitra M Patil at Swastha Yoga |
+
+## public/gallery/ (featured additions)
+
+| File | Dimensions | Format | Description |
+|---|---|---|---|
+| practice-shiva-meditation.webp | 1024x806 | WEBP | Gandharva Natesh and student seated in meditation before Lord Shiva backdrop, featured on homepage gallery |
+| journey-temple-reflection.webp | 750x1333 | WEBP | Gandharva Natesh in splits pose between temple gates with water reflection, featured on homepage gallery |
 
 ---
 
-**Totals:** 132 image files — 58 in `design-assets/` (brand + flowers + leaves + wood), 72 in `manjunath_poojari_whatsapp/images/`, plus derived public webp assets.
+**Totals:** 135 image files — 58 in `design-assets/` (brand + flowers + leaves + wood), 74 in `manjunath_poojari_whatsapp/images/`, plus derived public webp assets.
 

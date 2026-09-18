@@ -17,18 +17,25 @@
   gap: var(--space-lg);
 }
 
-.tileLarge {
+.tileShiva {
   grid-column: 1 / 8;
 }
 
-.tileMedium {
+.tileGate {
   grid-column: 8 / 13;
-  margin-top: var(--space-xl);
+  margin-top: var(--space-md);
 }
 
-.tileSmall {
-  grid-column: 2 / 6;
-  margin-top: calc(-1 * var(--space-lg));
+.tileClass {
+  grid-column: 1 / 6;
+}
+
+.tileBackbend {
+  grid-column: 6 / 9;
+}
+
+.tileCommunity {
+  grid-column: 9 / 13;
 }
 
 .frame {
@@ -43,14 +50,42 @@
 
 @media (max-width: 860px) {
   .collage {
-    grid-template-columns: 1fr;
-    gap: var(--space-lg);
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
   }
 
-  .tileLarge,
-  .tileMedium,
-  .tileSmall {
+  .tileShiva {
     grid-column: 1 / -1;
+  }
+
+  .tileGate {
+    grid-column: 1 / 2;
     margin-top: 0;
+  }
+
+  .tileClass {
+    grid-column: 2 / 3;
+  }
+
+  .tileBackbend {
+    grid-column: 1 / 2;
+  }
+
+  .tileCommunity {
+    grid-column: 2 / 3;
+  }
+}
+
+@media (max-width: 560px) {
+  .collage {
+    grid-template-columns: 1fr;
+  }
+
+  .tileShiva,
+  .tileGate,
+  .tileClass,
+  .tileBackbend,
+  .tileCommunity {
+    grid-column: 1 / -1;
   }
 }

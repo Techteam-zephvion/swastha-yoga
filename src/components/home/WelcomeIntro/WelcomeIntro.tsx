@@ -15,8 +15,8 @@ export function WelcomeIntro() {
       <div className={styles.grid}>
         <Reveal variant="fade-in" className={styles.portraitColumn}>
           <Media
-            src="/guru/gandharva-portrait.webp"
-            alt="Gandharva Natesh, Lead Yoga Therapist and Master at Swastha Yoga"
+            src="/guru/gandharva-forest-pose.webp"
+            alt="Gandharva Natesh performing an advanced yoga asana in nature, Lead Master & Yoga Therapist at Swastha Yoga"
             fill
             ratio="portrait"
             radius="lg"

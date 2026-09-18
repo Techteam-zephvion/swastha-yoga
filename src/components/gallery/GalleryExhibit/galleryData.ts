@@ -24,6 +24,22 @@ export interface GalleryPhoto {
  *  other in the unfiltered view. */
 export const PHOTOS: GalleryPhoto[] = [
   {
+    id: "practice-shiva-meditation",
+    src: "/gallery/practice-shiva-meditation.webp",
+    alt: "Gandharva Natesh and student seated in meditation before the Lord Shiva backdrop at Swastha Yoga",
+    caption: "Deep stillness before Adiyogi — where breath and inner focus align.",
+    category: "Practice",
+    ratio: "landscape",
+  },
+  {
+    id: "journey-temple-reflection",
+    src: "/gallery/journey-temple-reflection.webp",
+    alt: "Gandharva Natesh in a yoga split pose reflected between temple gates",
+    caption: "Poise between temple gates — stillness mirrored in water.",
+    category: "Journey",
+    ratio: "portrait",
+  },
+  {
     id: "class-group",
     src: "/about/community/class-group.webp",
     alt: "A full class of students together at the Swastha Yoga studio",

@@ -23,7 +23,33 @@ export function GalleryPreview() {
       </Reveal>
 
       <div className={styles.collage}>
-        <Reveal variant="fade-in" className={styles.tileLarge}>
+        <Reveal variant="fade-in" className={styles.tileShiva}>
+          <Media
+            src="/gallery/practice-shiva-meditation.webp"
+            alt="Gandharva Natesh and student seated in meditation before the Lord Shiva backdrop at Swastha Yoga"
+            fill
+            ratio="landscape"
+            radius="lg"
+            reveal={false}
+            sizes="(max-width: 860px) 100vw, 58vw"
+            wrapperClassName={styles.frame}
+          />
+        </Reveal>
+
+        <Reveal variant="fade-in" delay={0.1} className={styles.tileGate}>
+          <Media
+            src="/gallery/journey-temple-reflection.webp"
+            alt="Gandharva Natesh in a yoga split pose reflected between temple gates"
+            fill
+            ratio="portrait"
+            radius="lg"
+            reveal={false}
+            sizes="(max-width: 860px) 50vw, 42vw"
+            wrapperClassName={styles.frame}
+          />
+        </Reveal>
+
+        <Reveal variant="fade-in" delay={0.15} className={styles.tileClass}>
           <Media
             src="/gallery/class-downdog-om.webp"
             alt="A class holding downward dog together during an om chant"
@@ -31,12 +57,12 @@ export function GalleryPreview() {
             ratio="landscape"
             radius="lg"
             reveal={false}
-            sizes="(max-width: 860px) 90vw, 55vw"
+            sizes="(max-width: 860px) 50vw, 42vw"
             wrapperClassName={styles.frame}
           />
         </Reveal>
 
-        <Reveal variant="fade-in" delay={0.1} className={styles.tileMedium}>
+        <Reveal variant="fade-in" delay={0.2} className={styles.tileBackbend}>
           <Media
             src="/gallery/practice-backbend-closeup.webp"
             alt="Close-up of a student in a deep backbend stretch"
@@ -44,12 +70,12 @@ export function GalleryPreview() {
             ratio="portrait"
             radius="lg"
             reveal={false}
-            sizes="(max-width: 860px) 70vw, 32vw"
+            sizes="(max-width: 860px) 50vw, 25vw"
             wrapperClassName={styles.frame}
           />
         </Reveal>
 
-        <Reveal variant="fade-in" delay={0.2} className={styles.tileSmall}>
+        <Reveal variant="fade-in" delay={0.25} className={styles.tileCommunity}>
           <Media
             src="/gallery/community-group-meditation.webp"
             alt="Students seated together in group meditation"
@@ -57,7 +83,7 @@ export function GalleryPreview() {
             ratio="landscape"
             radius="lg"
             reveal={false}
-            sizes="(max-width: 860px) 50vw, 24vw"
+            sizes="(max-width: 860px) 50vw, 33vw"
             wrapperClassName={styles.frame}
           />
         </Reveal>
